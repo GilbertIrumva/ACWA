@@ -3,7 +3,8 @@ import Link from 'next/link';
 import Container from '../../components/ui/Container';
 import SectionHeading from '../../components/ui/SectionHeading';
 import { getStories } from '../../lib/sanity/queries';
-import { Calendar, User, MapPin, ArrowRight, BookOpen } from 'lucide-react';
+import { getImageUrl } from '../../lib/sanity/client';
+import { User, MapPin, ArrowRight } from 'lucide-react';
 
 export const metadata = {
   title: 'Stories & Field News | ACWA Kenya',
@@ -50,7 +51,7 @@ export default async function StoriesPage() {
             <div className="mb-16 bg-[#16A34A] text-[#F0FDF4] rounded-3xl overflow-hidden shadow-xl border border-[#16A34A] grid grid-cols-1 lg:grid-cols-12 gap-0">
               <div className="lg:col-span-7 aspect-[16/10] lg:aspect-auto relative bg-[#22C55E]">
                 <img
-                  src={featuredStory.featuredImage}
+                  src={getImageUrl(featuredStory.featuredImage, '/_MG_2602.jpg')}
                   alt={featuredStory.title}
                   className="w-full h-full object-cover"
                 />
@@ -79,7 +80,7 @@ export default async function StoriesPage() {
                   </div>
 
                   <Link
-                    href={`/stories/${featuredStory.slug.current}`}
+                    href={`/stories/${featuredStory.slug?.current || featuredStory.slug}`}
                     className="inline-flex items-center text-sm font-semibold text-[#A8875A] hover:text-[#F0FDF4] transition-colors"
                   >
                     <span>Read Full Story</span>
@@ -101,7 +102,11 @@ export default async function StoriesPage() {
               >
                 <div>
                   <div className="relative aspect-[16/10] bg-[#16A34A]">
-                    <img src={story.featuredImage} alt={story.title} className="w-full h-full object-cover" />
+                    <img
+                      src={getImageUrl(story.featuredImage, '/_MG_2558.jpg')}
+                      alt={story.title}
+                      className="w-full h-full object-cover"
+                    />
                     <span className="absolute top-4 left-4 bg-[#F0FDF4]/90 dark:bg-[#042F20]/90 text-[#16A34A] dark:text-[#22C55E] text-xs font-semibold px-3 py-1 rounded-full">
                       {story.category}
                     </span>
@@ -109,7 +114,7 @@ export default async function StoriesPage() {
 
                   <div className="p-6 space-y-3">
                     <h3 className="font-serif font-bold text-xl text-[#171A17] dark:text-[#F0FDF4] hover:text-[#16A34A] dark:hover:text-[#22C55E] transition-colors">
-                      <Link href={`/stories/${story.slug.current}`}>{story.title}</Link>
+                      <Link href={`/stories/${story.slug?.current || story.slug}`}>{story.title}</Link>
                     </h3>
                     <p className="text-xs text-[#4A5550] dark:text-[#D5EBD9]/85 leading-relaxed line-clamp-3">{story.excerpt}</p>
                   </div>
@@ -121,7 +126,7 @@ export default async function StoriesPage() {
                     <span className="truncate max-w-[140px]">{story.location}</span>
                   </span>
                   <Link
-                    href={`/stories/${story.slug.current}`}
+                    href={`/stories/${story.slug?.current || story.slug}`}
                     className="font-semibold text-[#16A34A] dark:text-[#22C55E] hover:text-[#D87532] transition-colors"
                   >
                     Read →

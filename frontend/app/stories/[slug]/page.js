@@ -3,8 +3,10 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Container from '../../../components/ui/Container';
 import Button from '../../../components/ui/Button';
+import PortableText from '../../../components/ui/PortableText';
 import { getStoryBySlug } from '../../../lib/sanity/queries';
-import { Calendar, User, MapPin, ArrowLeft, Share2, Tag } from 'lucide-react';
+import { getImageUrl } from '../../../lib/sanity/client';
+import { Calendar, User, MapPin, ArrowLeft } from 'lucide-react';
 
 export async function generateMetadata({ params }) {
   const story = await getStoryBySlug(params.slug);
@@ -29,6 +31,8 @@ export default async function StoryDetailPage({ params }) {
         year: 'numeric',
       })
     : '';
+
+  const heroImageUrl = getImageUrl(story.featuredImage, '/_MG_2602.jpg');
 
   return (
     <article className="py-12 sm:py-20 space-y-12">
@@ -72,18 +76,18 @@ export default async function StoryDetailPage({ params }) {
 
             <div className="flex items-center space-x-2 text-xs text-[#16A34A] dark:text-[#22C55E] pt-2">
               <User className="w-4 h-4 text-[#A8875A] dark:text-[#D87532]" />
-              <span>Reported by <strong className="font-semibold">{story.author}</strong></span>
+              <span>Reported by <strong className="font-semibold">{story.author || 'ACWA Team'}</strong></span>
             </div>
           </div>
         </Container>
       </section>
 
       {/* Main Image */}
-      {story.featuredImage && (
+      {heroImageUrl && (
         <section>
           <Container size="small">
             <div className="relative aspect-[16/9] rounded-3xl overflow-hidden shadow-xl bg-[#16A34A]">
-              <img src={story.featuredImage} alt={story.title} className="w-full h-full object-cover" />
+              <img src={heroImageUrl} alt={story.title} className="w-full h-full object-cover" />
             </div>
           </Container>
         </section>
@@ -92,22 +96,20 @@ export default async function StoryDetailPage({ params }) {
       {/* Body Content */}
       <section>
         <Container size="small">
-          <div className="prose prose-lg max-w-none text-[#171A17] dark:text-[#F0FDF4] space-y-6 leading-relaxed">
-            {story.body.split('\n\n').map((paragraph, idx) => (
-              <p key={idx} className="text-base sm:text-lg text-[#4A5550] dark:text-[#D5EBD9]/90">
-                {paragraph}
-              </p>
-            ))}
-          </div>
+          <PortableText value={story.body} className="text-[#171A17] dark:text-[#F0FDF4]" />
 
           {/* Photo Gallery if present */}
           {story.gallery && story.gallery.length > 0 && (
             <div className="mt-12 pt-8 border-t border-[#16A34A]/10 dark:border-emerald-800/40 space-y-4">
               <h3 className="font-serif font-bold text-xl text-[#171A17] dark:text-[#F0FDF4]">Field Gallery</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {story.gallery.map((imgUrl, imgIdx) => (
+                {story.gallery.map((galleryImg, imgIdx) => (
                   <div key={imgIdx} className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-[#16A34A]">
-                    <img src={imgUrl} alt={`Gallery item ${imgIdx + 1}`} className="w-full h-full object-cover" />
+                    <img
+                      src={getImageUrl(galleryImg, '/_MG_2558.jpg')}
+                      alt={`Gallery item ${imgIdx + 1}`}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 ))}
               </div>
