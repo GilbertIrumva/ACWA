@@ -37,7 +37,7 @@ export function urlFor(source) {
   if (!builder) return null;
 
   try {
-    const img = builder.image(source);
+    const img = builder.image(source).auto('format').fit('max');
     return {
       url: () => img.url(),
       toString: () => img.url(),
