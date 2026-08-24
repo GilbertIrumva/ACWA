@@ -1,6 +1,5 @@
 import Hero from '../components/home/Hero';
 import Intro from '../components/home/Intro';
-import ImpactStats from '../components/home/ImpactStats';
 import PhotoReel from '../components/home/PhotoReel';
 import Programs from '../components/home/Programs';
 import PeacebuildingSpotlight from '../components/home/PeacebuildingSpotlight';
@@ -16,7 +15,6 @@ export default function HomePage() {
     <>
       <Hero />
       <Intro />
-      <ImpactStats />
       <PhotoReel />
       <Programs />
       <PeacebuildingSpotlight />

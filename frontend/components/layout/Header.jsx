@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import Button from '../ui/Button';
 import Container from '../ui/Container';
 import MobileNavigation from './MobileNavigation';
 import ThemeToggle from '../ui/ThemeToggle';
@@ -12,8 +11,8 @@ import { Menu, Heart } from 'lucide-react';
 const NAV_LINKS = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
-  { name: 'Programs', href: '/programs' },
-  { name: 'Impact', href: '/impact' },
+  { name: 'What We Do', href: '/programs' },
+  { name: 'Our Impact', href: '/impact' },
   { name: 'Stories', href: '/stories' },
   { name: 'Get Involved', href: '/get-involved' },
   { name: 'Contact', href: '/contact' },
@@ -26,7 +25,7 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 20) {
+      if (window.scrollY > 30) {
         setScrolled(true);
       } else {
         setScrolled(false);
@@ -36,39 +35,37 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const headerBgClass = scrolled
+    ? 'bg-white/95 dark:bg-[#042F20]/95 backdrop-blur-md shadow-sm border-b border-gray-100 dark:border-emerald-800/30 py-3'
+    : 'bg-white dark:bg-[#042F20] border-b border-gray-100 dark:border-emerald-800/30 py-4';
+
   return (
-    <header
-      className={`sticky top-0 z-40 transition-all duration-300 ${
-        scrolled
-          ? 'bg-[#F0FDF4]/95 dark:bg-[#042F20]/95 backdrop-blur-md shadow-sm border-b border-[#16A34A]/10 dark:border-emerald-800/30 py-3'
-          : 'bg-[#F0FDF4] dark:bg-[#042F20] border-b border-[#16A34A]/10 dark:border-emerald-800/30 py-5'
-      }`}
-    >
+    <header className={`sticky top-0 z-50 transition-all duration-300 ${headerBgClass}`}>
       <Container>
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link
             href="/"
             prefetch={true}
-            className="flex items-center space-x-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#16A34A] rounded-xl p-1"
+            className="flex items-center space-x-3 group focus:outline-none rounded-lg p-1"
           >
             <img
               src="/logo.jpg"
               alt="ACWA Logo"
-              className="w-11 h-11 rounded-2xl object-cover shadow-sm border border-[#16A34A]/20"
+              className="w-11 h-11 rounded-lg object-cover shadow-sm border border-emerald-600/30"
             />
             <div>
-              <span className="font-serif font-bold text-xl text-[#16A34A] dark:text-[#22C55E] block leading-none tracking-tight">
+              <span className="font-serif font-extrabold text-2xl tracking-tight block leading-none text-[#2E7D32] dark:text-[#4CAF50]">
                 ACWA
               </span>
-              <span className="text-[10px] text-[#A8875A] dark:text-[#D87532] font-semibold uppercase tracking-widest block mt-1">
+              <span className="text-[11px] font-semibold tracking-wider block mt-1 text-gray-500 dark:text-gray-300">
                 Arise Community Welfare Access
               </span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-1 xl:space-x-2" aria-label="Main Navigation">
+          <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8" aria-label="Main Navigation">
             {NAV_LINKS.map((link) => {
               const isActive = pathname === link.href || (link.href !== '/' && pathname.startsWith(link.href));
               return (
@@ -76,10 +73,10 @@ export default function Header() {
                   key={link.name}
                   href={link.href}
                   prefetch={true}
-                  className={`px-3.5 py-2 rounded-full text-sm font-medium transition-all duration-75 ease-out active:scale-95 ${
+                  className={`py-1 text-base font-semibold transition-all duration-150 relative ${
                     isActive
-                      ? 'bg-[#16A34A] text-[#F0FDF4]'
-                      : 'text-[#171A17] dark:text-[#F0FDF4] hover:text-[#16A34A] dark:hover:text-[#22C55E] hover:bg-[#D5EBD9] dark:hover:bg-[#064E3B]'
+                      ? 'text-[#2E7D32] dark:text-[#4CAF50] border-b-2 border-[#2E7D32] dark:border-[#4CAF50]'
+                      : 'text-gray-900 dark:text-white hover:text-[#2E7D32] dark:hover:text-[#4CAF50] hover:border-b-2 hover:border-[#2E7D32] dark:hover:border-[#4CAF50]'
                   }`}
                 >
                   {link.name}
@@ -88,19 +85,22 @@ export default function Header() {
             })}
           </nav>
 
-          {/* Desktop CTA, Theme Toggle & Mobile Toggle */}
-          <div className="flex items-center space-x-3">
+          {/* Desktop CTA */}
+          <div className="flex items-center space-x-4">
             <ThemeToggle />
 
-            <Button href="/donate" variant="orange" size="md" className="hidden sm:inline-flex shadow-sm">
-              <Heart className="w-4 h-4 mr-2 fill-white" />
-              Donate
-            </Button>
+            <Link
+              href="/donate"
+              className="hidden sm:inline-flex items-center justify-center px-6 py-2.5 bg-[#1B5E20] hover:bg-[#2E7D32] text-white font-bold text-base rounded-none transition-colors shadow-md group"
+            >
+              <Heart className="w-4 h-4 mr-2 fill-white group-hover:scale-110 transition-transform" />
+              <span>Donate</span>
+            </Link>
 
             <button
               type="button"
               onClick={() => setMobileMenuOpen(true)}
-              className="p-2.5 rounded-full text-[#16A34A] dark:text-[#22C55E] bg-[#D5EBD9] dark:bg-[#064E3B] hover:bg-[#DCFCE7] active:scale-90 lg:hidden focus:outline-none focus:ring-2 focus:ring-[#16A34A] transition-all duration-75"
+              className="p-2.5 rounded-none lg:hidden focus:outline-none text-gray-900 dark:text-white bg-gray-100 dark:bg-emerald-900/40"
               aria-label="Open menu"
             >
               <Menu className="w-6 h-6" />

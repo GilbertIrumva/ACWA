@@ -1,6 +1,5 @@
 import React from 'react';
 import Container from '../ui/Container';
-import SectionHeading from '../ui/SectionHeading';
 import { Users, Handshake, HeartHandshake, Compass } from 'lucide-react';
 
 export default function Intro() {
@@ -32,53 +31,42 @@ export default function Intro() {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-[#D5EBD9] dark:bg-[#064E3B]/80 border-y border-[#16A34A]/10 dark:border-emerald-800/30 transition-colors duration-200">
+    <section className="py-20 md:py-28 bg-white dark:bg-[#042F20] transition-colors duration-200">
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          {/* Left Column: Editorial Summary */}
-          <div className="lg:col-span-5 space-y-6">
-            <SectionHeading
-              badge="About Our Approach"
-              title="Community-led action. Sustainable change."
-              subtitle="ACWA is built on the conviction that lasting transformation comes from within communities when local voices are empowered and supported."
-            />
-            
-            <p className="text-[#4A5550] dark:text-[#D5EBD9]/90 text-base leading-relaxed">
-              Established in 2024 and officially registered under Kenya’s Community Groups Registration Act No. 30 of 2021 in 2025, ARISE COMMUNITY WELFARE ACCESS (ACWA) mobilizes grassroots resources and international partnerships to address vulnerable conditions in Kakuma Refugee Camp and host areas.
-            </p>
+        {/* SIR Africa Style Centered Header */}
+        <div className="text-center max-w-4xl mx-auto space-y-4 mb-16">
+          <span className="text-[#2E7D32] dark:text-[#4CAF50] font-bold text-xs uppercase tracking-[3px] block">
+            WHY ACWA? WHY NOW?
+          </span>
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white leading-tight">
+            We are a refugee and host community organization creating pathways for displaced people to learn, earn, and lead change.
+          </h2>
+          <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl mx-auto pt-2">
+            Through education, digital inclusion, livelihoods, peacebuilding, child protection, and community welfare, we help refugees and host communities build sustainable futures with dignity and hope.
+          </p>
+        </div>
 
-            <div className="p-5 rounded-2xl bg-[#F0FDF4] dark:bg-[#042F20] border border-[#16A34A]/15 dark:border-emerald-700/40 space-y-2">
-              <span className="text-xs font-bold text-[#A8875A] dark:text-[#D87532] uppercase tracking-wider block">
-                Who We Collaborate With
-              </span>
-              <p className="text-sm font-medium text-[#16A34A] dark:text-[#22C55E]">
-                Local Leaders • Primary & Secondary Schools • Youth Organizations • Women’s Savings Groups • Humanitarian Agencies
-              </p>
-            </div>
-          </div>
-
-          {/* Right Column: 4 Principle Cards */}
-          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {pillars.map((item, idx) => {
-              const Icon = item.icon;
-              return (
-                <div
-                  key={idx}
-                  className="bg-[#F0FDF4] dark:bg-[#042F20] p-6 rounded-3xl border border-[#16A34A]/10 dark:border-emerald-700/30 shadow-sm hover:shadow-md transition-all space-y-4"
-                >
-                  <div className="w-12 h-12 rounded-2xl bg-[#16A34A] text-[#F0FDF4] flex items-center justify-center">
-                    <Icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="font-serif font-semibold text-xl text-[#171A17] dark:text-[#F0FDF4]">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm text-[#4A5550] dark:text-[#D5EBD9]/80 leading-relaxed">
-                    {item.description}
-                  </p>
+        {/* 4 Pillar Cards with SIR Africa Styling */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {pillars.map((item, idx) => {
+            const Icon = item.icon;
+            return (
+              <div
+                key={idx}
+                className="bg-[#F9FAFB] dark:bg-[#064E3B]/40 p-8 rounded-none border-t-4 border-[#2E7D32] shadow-sm hover:shadow-md transition-all space-y-4"
+              >
+                <div className="w-12 h-12 rounded-none bg-[#2E7D32] text-white flex items-center justify-center">
+                  <Icon className="w-6 h-6 text-white" />
                 </div>
-              );
-            })}
-          </div>
+                <h3 className="font-serif font-bold text-xl text-gray-900 dark:text-white">
+                  {item.title}
+                </h3>
+                <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
+            );
+          })}
         </div>
       </Container>
     </section>

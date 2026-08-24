@@ -20,6 +20,7 @@ The permaculture project is not only providing vital nutrition for vulnerable ho
     gallery: [
       '/_MG_2602.jpg',
       '/IMG_20260223_081540_318.jpg',
+      '/livelihood.jpg',
     ],
     featured: true,
   },
@@ -41,7 +42,7 @@ Discussions focused on mitigating tensions around firewood collection, water poi
 "When we sit together under the shade tree and talk as human beings, we realize our goals for our children are exactly the same," shared a Turkana village elder.
 
 ACWA continues to support the committee with monthly check-ins and conflict resolution refresher workshops.`,
-    gallery: ['/IMG_20260113_180100_323.jpg'],
+    gallery: ['/IMG_20260113_180100_323.jpg', '/peace-building-and.jpg'],
     featured: false,
   },
   {
@@ -60,7 +61,64 @@ ACWA continues to support the committee with monthly check-ins and conflict reso
 In addition, volunteer teachers conduct weekend remedial classes in English and mathematics for children who have recently arrived in the camp or require extra academic support.
 
 "Every child deserves the chance to learn and imagine a bright future," says OMBENI MASUMBUKO, ACWA Lead. "By removing basic material barriers, we give these children the confidence to stay in school."`,
-    gallery: ['/IMG_20260223_081540_318.jpg'],
+    gallery: ['/IMG_20260223_081540_318.jpg', '/education.jpg'],
+    featured: false,
+  },
+  {
+    _id: 'story-4',
+    title: 'Safeguarding Childhood: Community Child Protection Networks in Kakuma',
+    slug: { current: 'safeguarding-childhood-community-child-protection-kakuma' },
+    excerpt:
+      'Establishing grassroots child safeguarding committees, orphan support drives, and safe spaces for vulnerable children in Kakuma camp.',
+    publishedAt: '2025-02-18T10:15:00Z',
+    category: 'Child Welfare',
+    author: 'ACWA Protection Officer',
+    location: 'Kakuma Refugee Camp Zones',
+    featuredImage: '/IMG_20260717_180300_038.jpg',
+    body: `Children in humanitarian settings face extreme vulnerabilities, including risk of neglect, trauma, and lack of basic welfare support. ACWA's Child Protection initiative works at the grassroots level to train community protection monitors and set up safe spaces.
+
+Through regular home visits and coordination with local school administrators, ACWA identifies orphans and child-headed households needing emergency scholastic and nutritional intervention.
+
+"Protecting a child takes an entire community working in unison," notes the ACWA Protection Officer. "When we protect a child, we protect the future of Turkana County."`,
+    gallery: ['/IMG_20260717_180300_038.jpg', '/child-protection.jpg'],
+    featured: false,
+  },
+  {
+    _id: 'story-5',
+    title: 'Health Outreach & Sanitation Drive Across Settlement Villages',
+    slug: { current: 'health-outreach-sanitation-drive-settlement-villages' },
+    excerpt:
+      'Mobilizing community health promoters to conduct hygiene education, clean water protection, and preventive health drives in Kakuma.',
+    publishedAt: '2025-02-04T08:45:00Z',
+    category: 'Community Health',
+    author: 'ACWA Health Team',
+    location: 'Kakuma Host Villages & Camp Zones',
+    featuredImage: '/IMG_20251022_132118_086.jpg',
+    body: `Preventive healthcare and hygiene are essential to preventing disease outbreaks in densely populated refugee settlements and arid host villages. ACWA health promoters conduct door-to-door sanitation demonstrations and handwashing station setups.
+
+In partnership with local healthcare volunteers, ACWA distributes clean hygiene kits and conducts maternal nutrition awareness sessions for expectant mothers.
+
+"Awareness saves lives," emphasizes an ACWA community health volunteer. "Simple practices like water treatment and proper sanitation drastically reduce waterborne illnesses."`,
+    gallery: ['/IMG_20251022_132118_086.jpg', '/IMG_20260619_180345_290.jpg'],
+    featured: false,
+  },
+  {
+    _id: 'story-6',
+    title: 'Uniting Youth Through Sports, Culture & Social Cohesion',
+    slug: { current: 'uniting-youth-sports-culture-social-cohesion' },
+    excerpt:
+      'Mobilizing refugee and Turkana youth through sports tournaments, peace ambassador leadership training, and cultural exchanges.',
+    publishedAt: '2025-01-30T16:00:00Z',
+    category: 'Youth Action',
+    author: 'OMBENI MASUMBUKO',
+    location: 'Kakuma Main Sports Field',
+    featuredImage: '/IMG_20260814_185031_400.jpg',
+    body: `Sports provide a powerful, neutral platform to break down barriers and foster friendships among young people. ACWA organized an inter-community football tournament bringing together youth teams from different refugee camp zones and host villages.
+
+Alongside the matches, youth leaders participated in peacebuilding workshops, learning leadership, non-violent communication, and community organizing skills.
+
+"On the pitch, we are not refugees or host community—we are teammates," says a youth participant. "Sports gave us a shared language and lifelong friendships."`,
+    gallery: ['/IMG_20260814_185031_400.jpg', '/IMG-20260701-WA0234.jpg'],
     featured: false,
   },
 ];

@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'next/link';
 import Container from '../ui/Container';
 import SectionHeading from '../ui/SectionHeading';
-import Button from '../ui/Button';
 import { ArrowRight, Handshake, ShieldCheck, HeartHandshake, Sprout, Activity } from 'lucide-react';
 
 export default function Programs() {
@@ -65,56 +64,59 @@ export default function Programs() {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-[#F0FDF4] dark:bg-[#042F20] transition-colors duration-200">
+    <section className="py-20 md:py-28 bg-[#F9FAFB] dark:bg-[#042F20] transition-colors duration-200">
       <Container>
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <SectionHeading
-            badge="Core Program Pillars"
+            badge="WHAT WE DO"
             title="Holistic Interventions for Long-Term Self-Reliance"
             subtitle="We implement multi-faceted community programs designed to tackle immediate vulnerability while building enduring capacity."
           />
           <div className="shrink-0">
-            <Button href="/programs" variant="outline">
-              View All Program Specs
-            </Button>
+            <Link
+              href="/programs"
+              className="inline-flex items-center px-6 py-3 border-2 border-[#2E7D32] text-[#2E7D32] dark:text-[#4CAF50] dark:border-[#4CAF50] font-bold text-sm hover:bg-[#2E7D32] hover:text-white transition-colors"
+            >
+              <span>View All Programs</span>
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Link>
           </div>
         </div>
 
-        {/* Programs Grid */}
+        {/* Programs Grid with SIR Africa Card Styling */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {programsList.map((program) => {
             const Icon = program.icon;
             return (
               <div
                 key={program.id}
-                className="group bg-[#D5EBD9] dark:bg-[#064E3B]/90 rounded-3xl overflow-hidden border border-[#16A34A]/15 dark:border-emerald-700/40 flex flex-col justify-between hover:shadow-xl transition-all duration-300"
+                className="group bg-white dark:bg-[#064E3B]/40 rounded-none border border-gray-200 dark:border-emerald-800/40 border-t-4 border-t-[#2E7D32] flex flex-col justify-between shadow-sm hover:shadow-lg transition-all duration-300"
               >
                 <div>
                   {/* Image container */}
-                  <div className="relative aspect-[16/10] overflow-hidden bg-[#16A34A]">
+                  <div className="relative aspect-[16/10] overflow-hidden bg-gray-100">
                     <img
                       src={program.image}
                       alt={program.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#16A34A]/80 via-transparent to-transparent" />
-                    <span className="absolute top-4 left-4 bg-[#F0FDF4]/90 dark:bg-[#042F20]/90 backdrop-blur-sm text-[#16A34A] dark:text-[#22C55E] text-xs font-semibold px-3 py-1 rounded-full border border-[#16A34A]/10">
+                    <span className="absolute top-4 left-4 bg-[#1B5E20] text-white text-xs font-bold px-3 py-1 uppercase tracking-wider">
                       {program.badge}
                     </span>
                   </div>
 
                   {/* Content body */}
                   <div className="p-6 sm:p-8 space-y-3">
-                    <div className="flex items-center space-x-2 text-[#A8875A] dark:text-[#D87532]">
-                      <Icon className="w-5 h-5 text-white" />
-                      <span className="text-xs font-bold uppercase tracking-wider">ACWA Program</span>
+                    <div className="flex items-center space-x-2 text-[#2E7D32] dark:text-[#4CAF50]">
+                      <Icon className="w-4 h-4 text-[#2E7D32] dark:text-[#4CAF50]" />
+                      <span className="text-xs font-bold uppercase tracking-widest">ACWA Initiative</span>
                     </div>
 
-                    <h3 className="font-serif font-bold text-2xl text-[#171A17] dark:text-[#F0FDF4] group-hover:text-[#16A34A] dark:group-hover:text-[#22C55E] transition-colors">
+                    <h3 className="font-serif font-bold text-2xl text-gray-900 dark:text-white group-hover:text-[#2E7D32] dark:group-hover:text-[#4CAF50] transition-colors">
                       {program.title}
                     </h3>
 
-                    <p className="text-sm text-[#4A5550] dark:text-[#D5EBD9]/85 leading-relaxed">
+                    <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
                       {program.description}
                     </p>
                   </div>
@@ -124,10 +126,10 @@ export default function Programs() {
                 <div className="px-6 pb-6 pt-2 sm:px-8 sm:pb-8">
                   <Link
                     href={program.href}
-                    className="inline-flex items-center text-sm font-semibold text-[#16A34A] dark:text-[#22C55E] group-hover:text-[#D87532] transition-colors"
+                    className="inline-flex items-center text-sm font-bold text-[#2E7D32] dark:text-[#4CAF50] hover:text-[#1B5E20] transition-colors"
                   >
-                    <span>Read Full Program Details</span>
-                    <ArrowRight className="w-4 h-4 ml-2 text-white group-hover:translate-x-1 transition-transform" />
+                    <span>Read Program Details</span>
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>
               </div>

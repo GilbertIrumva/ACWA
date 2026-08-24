@@ -1,7 +1,7 @@
 import React from 'react';
 import Container from '../ui/Container';
 import SectionHeading from '../ui/SectionHeading';
-import { ShieldCheck, CheckCircle2, HeartHandshake, Sprout, GraduationCap, Users } from 'lucide-react';
+import { CheckCircle2, HeartHandshake, Sprout, GraduationCap, Users } from 'lucide-react';
 
 export default function ImpactStats() {
   const qualitativePillars = [
@@ -32,53 +32,47 @@ export default function ImpactStats() {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-[#16A34A] text-[#F0FDF4]">
+    <section className="py-20 md:py-28 bg-white dark:bg-[#042F20] transition-colors duration-200">
       <Container>
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
           <SectionHeading
-            badge="Verified Impact Pillars"
+            badge="OUR IMPACT"
             title="Measurable Action & Qualitative Integrity"
             subtitle="At ACWA, we prioritize authentic grassroots transformation over inflated statistics. Every program is grounded in verifiable community participation and dignity."
             centered={true}
-            light={true}
           />
-          
-          <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-[#22C55E] border border-[#A8875A]/40 text-xs text-[#D5EBD9] mt-4">
-            <ShieldCheck className="w-4 h-4 text-white" />
-            <span>Data Transparency: Numerical metrics are validated and managed via Sanity CMS</span>
-          </div>
         </div>
 
-        {/* 4 Pillars Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* 4 Pillars Grid with SIR Africa Styling */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {qualitativePillars.map((item, idx) => {
             const Icon = item.icon;
             return (
               <div
                 key={idx}
-                className="bg-[#22C55E]/50 backdrop-blur-sm p-6 rounded-3xl border border-[#F0FDF4]/15 flex flex-col justify-between hover:bg-[#22C55E]/80 transition-colors"
+                className="bg-[#F9FAFB] dark:bg-[#064E3B]/40 p-8 rounded-none border-t-4 border-[#2E7D32] flex flex-col justify-between shadow-sm hover:shadow-md transition-all space-y-4"
               >
                 <div className="space-y-4">
-                  <div className="w-12 h-12 rounded-2xl bg-[#16A34A] text-white flex items-center justify-center shadow-md">
+                  <div className="w-12 h-12 rounded-none bg-[#2E7D32] text-white flex items-center justify-center">
                     <Icon className="w-6 h-6 text-white" />
                   </div>
 
                   <div>
-                    <span className="text-[11px] font-semibold text-[#A8875A] uppercase tracking-wider block mb-1">
+                    <span className="text-xs font-bold text-[#2E7D32] dark:text-[#4CAF50] uppercase tracking-widest block mb-1">
                       {item.status}
                     </span>
-                    <h3 className="font-serif font-bold text-xl text-[#F0FDF4]">
+                    <h3 className="font-serif font-bold text-xl text-gray-900 dark:text-white">
                       {item.pillar}
                     </h3>
                   </div>
 
-                  <p className="text-sm text-[#D5EBD9]/80 leading-relaxed">
+                  <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
                     {item.qualitative}
                   </p>
                 </div>
 
-                <div className="pt-6 mt-6 border-t border-[#F0FDF4]/10 flex items-center space-x-2 text-xs text-[#D5EBD9]">
-                  <CheckCircle2 className="w-4 h-4 text-white" />
+                <div className="pt-6 mt-6 border-t border-gray-200 dark:border-emerald-800/40 flex items-center space-x-2 text-xs font-bold text-[#2E7D32] dark:text-[#4CAF50]">
+                  <CheckCircle2 className="w-4 h-4 text-[#2E7D32] dark:text-[#4CAF50]" />
                   <span>Grassroots Action Verified</span>
                 </div>
               </div>

@@ -1,18 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --font-heading: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
-  --font-serif: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-hero: 'Lora', Georgia, serif;
+  --font-serif: 'Lora', 'Outfit', Georgia, serif;
+  --font-sans: 'Nunito', 'Inter', system-ui, -apple-system, sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
-  background-color: #F0FDF4;
+  background-color: #FFFFFF;
   color: #171A17;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
@@ -24,7 +24,7 @@ html.dark {
 
 body {
   font-family: var(--font-sans);
-  background-color: #F0FDF4;
+  background-color: #FFFFFF;
   color: #171A17;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -32,9 +32,8 @@ body {
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-h1 {
-  font-family: var(--font-heading);
-  letter-spacing: -0.025em;
+h1, h2, h3 {
+  font-family: var(--font-serif);
 }
 
 html.dark body {

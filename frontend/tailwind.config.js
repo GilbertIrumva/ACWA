@@ -24,9 +24,8 @@ module.exports = {
         },
       },
       fontFamily: {
-        heading: ['var(--font-heading)', 'Outfit', 'Plus Jakarta Sans', 'sans-serif'],
-        serif: ['var(--font-heading)', 'Outfit', 'Plus Jakarta Sans', 'sans-serif'],
-        sans: ['var(--font-sans)', 'Inter', 'system-ui', 'sans-serif'],
+        serif: ['Lora', 'Georgia', 'serif'],
+        sans: ['Nunito', 'Inter', 'system-ui', 'sans-serif'],
       },
       boxShadow: {
         editorial: '0 10px 30px -10px rgba(4, 78, 53, 0.08)',

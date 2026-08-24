@@ -12,10 +12,8 @@ export default function SectionHeading({
     <div className={`max-w-3xl ${centered ? 'mx-auto text-center' : ''} ${className}`}>
       {badge && (
         <span
-          className={`inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase mb-4 ${
-            light
-              ? 'bg-[#F0FDF4]/15 text-[#D5EBD9] border border-[#F0FDF4]/30'
-              : 'bg-[#16A34A]/10 dark:bg-[#10B981]/20 text-[#16A34A] dark:text-[#34D399] border border-[#16A34A]/20 dark:border-[#10B981]/30'
+          className={`block text-xs font-bold tracking-[2.5px] uppercase mb-3 ${
+            light ? 'text-[#4CAF50]' : 'text-[#2E7D32] dark:text-[#4CAF50]'
           }`}
         >
           {badge}
@@ -23,8 +21,8 @@ export default function SectionHeading({
       )}
       {title && (
         <h2
-          className={`font-serif text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-tight mb-4 ${
-            light ? 'text-[#F0FDF4]' : 'text-[#171A17] dark:text-[#F0FDF4]'
+          className={`font-serif text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight mb-4 ${
+            light ? 'text-white' : 'text-gray-900 dark:text-white'
           }`}
         >
           {title}
@@ -33,7 +31,7 @@ export default function SectionHeading({
       {subtitle && (
         <p
           className={`text-lg sm:text-xl font-normal leading-relaxed ${
-            light ? 'text-[#D5EBD9]/80' : 'text-[#3C5245] dark:text-[#D5EBD9]/80'
+            light ? 'text-white/90' : 'text-gray-600 dark:text-gray-300'
           }`}
         >
           {subtitle}
