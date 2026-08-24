@@ -9,7 +9,7 @@ export default function PeacebuildingSpotlight() {
       {/* Background Image Behind Fonts */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/peace building and .jpg"
+          src="/peace-building-and.jpg"
           alt="Community members participating in an ACWA peace dialogue in Kakuma"
           className="w-full h-full object-cover object-center"
         />

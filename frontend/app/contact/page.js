@@ -17,7 +17,7 @@ export default function ContactPage() {
       <section className="relative overflow-hidden py-20 sm:py-28 text-white">
         <div className="absolute inset-0 z-0">
           <img
-            src="/get in touch.jpg"
+            src="/get-in-touch.jpg"
             alt="ACWA field team and community engagement in Kakuma"
             className="w-full h-full object-cover object-center brightness-110 contrast-105"
           />

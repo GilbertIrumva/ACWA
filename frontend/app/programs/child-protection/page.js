@@ -54,7 +54,7 @@ export default function ChildProtectionProgramPage() {
             <div className="lg:col-span-6">
               <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-xl border border-[#16A34A]/15 dark:border-emerald-700/40">
                 <img
-                  src="/child protection.jpg"
+                  src="/child-protection.jpg"
                   alt="Child protection and welfare initiative"
                   className="w-full h-full object-cover"
                 />

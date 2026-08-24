@@ -15,7 +15,7 @@ export default function Programs() {
       icon: Handshake,
       description:
         'Facilitating grassroots community peace dialogues, conflict resolution training, peace awareness, and structured youth engagement between refugee and host communities.',
-      image: '/peace building and .jpg',
+      image: '/peace-building-and.jpg',
       href: '/programs/peacebuilding',
     },
     {
@@ -37,7 +37,7 @@ export default function Programs() {
       icon: HeartHandshake,
       description:
         'Safeguarding children through rights awareness campaigns, targeted support for vulnerable orphans, psychosocial care, and child-safe community spaces.',
-      image: '/child protection.jpg',
+      image: '/child-protection.jpg',
       href: '/programs/child-protection',
     },
     {

@@ -26,7 +26,7 @@ const PROGRAMS_DATA = [
       'Youth engagement for peace and social cohesion',
     ],
     beneficiaries: 'Refugee elders, host community leaders, youth groups',
-    image: '/peace building and .jpg',
+    image: '/peace-building-and.jpg',
   },
   {
     slug: 'education',
@@ -58,7 +58,7 @@ const PROGRAMS_DATA = [
       'Creation of safe, protective child environments',
     ],
     beneficiaries: 'Vulnerable children, orphans, child-headed households',
-    image: '/child protection.jpg',
+    image: '/child-protection.jpg',
   },
   {
     slug: 'livelihoods',
@@ -100,7 +100,7 @@ export default function ProgramsHubPage() {
       <section className="relative overflow-hidden py-20 sm:py-28 text-white">
         <div className="absolute inset-0 z-0">
           <img
-            src="/peace building and .jpg"
+            src="/peace-building-and.jpg"
             alt="ACWA community initiatives in Kakuma"
             className="w-full h-full object-cover object-center brightness-110 contrast-105"
           />

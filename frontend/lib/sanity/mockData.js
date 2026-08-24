@@ -112,7 +112,7 @@ export const MOCK_PROGRAMS = [
     category: 'Social Cohesion',
     shortDescription: 'Grassroots peace dialogues, conflict resolution training, youth ambassadors, and joint refugee-host forums.',
     description: 'Our peacebuilding program addresses social tensions between refugee camp zones and local host communities through inter-cultural dialogue, joint community projects, and trained conflict mediators.',
-    heroImage: '/peace building and .jpg',
+    heroImage: '/peace-building-and.jpg',
     activities: [
       'Community peace dialogues in Kakuma camp zones & host villages',
       'Conflict resolution & mediation training for elders and leaders',
@@ -150,7 +150,7 @@ export const MOCK_PROGRAMS = [
     category: 'Child Safeguarding',
     shortDescription: 'Support for vulnerable orphans, child rights awareness campaigns, psychosocial care, and safe community spaces.',
     description: 'Protecting children from harm, neglect, and trauma through community child protection networks, safe spaces, and psychosocial support.',
-    heroImage: '/child protection.jpg',
+    heroImage: '/child-protection.jpg',
     activities: [
       'Support & welfare assistance for orphans and vulnerable children',
       'Child rights awareness workshops with community leaders',
@@ -250,7 +250,7 @@ export const MOCK_EVENTS = [
     description: 'Join us for a day of cultural exchange, sports, music, and joint peace dialogues celebrating diversity in Kakuma.',
     date: '2025-06-20T10:00:00Z',
     location: 'Kakuma Main Stadium',
-    image: '/peace building and .jpg',
+    image: '/peace-building-and.jpg',
     registrationUrl: 'https://acwa.org/events/peace-festival',
     featured: true,
   },

@@ -7,10 +7,10 @@ import { Camera } from 'lucide-react';
 
 const REEL_IMAGES = [
   { src: '/home.jpg', caption: 'ACWA Community Gathering in Kakuma' },
-  { src: '/get in touch.jpg', caption: 'ACWA Community Engagement & Outreach' },
-  { src: '/peace building and .jpg', caption: 'Peacebuilding & Dialogue Session' },
+  { src: '/get-in-touch.jpg', caption: 'ACWA Community Engagement & Outreach' },
+  { src: '/peace-building-and.jpg', caption: 'Peacebuilding & Dialogue Session' },
   { src: '/education.jpg', caption: 'Child Education & Learning Support' },
-  { src: '/child protection.jpg', caption: 'Child Welfare & Protection Program' },
+  { src: '/child-protection.jpg', caption: 'Child Welfare & Protection Program' },
   { src: '/livelihood.jpg', caption: 'Permaculture & Sustainable Livelihoods' },
   { src: '/Impact.jpg', caption: 'Community Impact & Verification' },
   { src: '/_MG_2558.jpg', caption: 'Peace Dialogue Circle' },
