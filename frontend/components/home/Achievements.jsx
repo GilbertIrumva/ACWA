@@ -52,10 +52,10 @@ export default function Achievements() {
               >
                 <div className="flex items-center justify-between">
                   <div className="w-12 h-12 rounded-2xl bg-[#16A34A] text-[#F0FDF4] flex items-center justify-center">
-                    <Icon className="w-6 h-6 text-[#A8875A]" />
+                    <Icon className="w-6 h-6 text-white" />
                   </div>
                   <span className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-[#16A34A]/10 dark:bg-[#22C55E]/20 text-[#16A34A] dark:text-[#22C55E] text-xs font-semibold">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-[#A8875A] dark:text-[#D87532]" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-white" />
                     <span>{item.badge}</span>
                   </span>
                 </div>

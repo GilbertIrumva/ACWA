@@ -44,7 +44,7 @@ export default function EducationSpotlight() {
         <div className="max-w-3xl space-y-6 text-white">
           {/* Badge Tag */}
           <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-[#16A34A] text-[#F0FDF4] text-xs font-semibold uppercase tracking-wider border border-[#22C55E]/40 shadow-md">
-            <GraduationCap className="w-4 h-4 text-[#D87532]" />
+            <GraduationCap className="w-4 h-4 text-white" />
             <span>Program Spotlight • Education</span>
           </div>
 
@@ -63,7 +63,7 @@ export default function EducationSpotlight() {
               return (
                 <div key={idx} className="p-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 space-y-2">
                   <div className="w-8 h-8 rounded-xl bg-[#22C55E] text-[#F0FDF4] flex items-center justify-center">
-                    <Icon className="w-4 h-4 text-[#D87532]" />
+                    <Icon className="w-4 h-4 text-white" />
                   </div>
                   <h3 className="font-serif font-bold text-base text-white">{item.title}</h3>
                   <p className="text-xs text-[#D5EBD9] leading-relaxed">{item.desc}</p>

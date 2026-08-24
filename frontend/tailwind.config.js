@@ -24,7 +24,8 @@ module.exports = {
         },
       },
       fontFamily: {
-        serif: ['var(--font-serif)', 'Playfair Display', 'Georgia', 'serif'],
+        heading: ['var(--font-heading)', 'Outfit', 'Plus Jakarta Sans', 'sans-serif'],
+        serif: ['var(--font-heading)', 'Outfit', 'Plus Jakarta Sans', 'sans-serif'],
         sans: ['var(--font-sans)', 'Inter', 'system-ui', 'sans-serif'],
       },
       boxShadow: {

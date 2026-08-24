@@ -41,7 +41,7 @@ export default function PhotoReel() {
             subtitle="Authentic photographs documenting our community peacebuilding, education, livelihoods, and protection work on the ground in Turkana County, Kenya."
           />
           <div className="mt-4 sm:mt-0 flex items-center space-x-2 text-xs font-semibold text-[#16A34A] bg-[#D5EBD9] px-3.5 py-2 rounded-full border border-[#16A34A]/20 shrink-0">
-            <Camera className="w-4 h-4 text-[#16A34A]" />
+            <Camera className="w-4 h-4 text-white" />
             <span>22 Real Field Photos</span>
           </div>
         </div>

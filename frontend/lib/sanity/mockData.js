@@ -19,7 +19,7 @@ In early 2025, ARISE COMMUNITY WELFARE ACCESS (ACWA) launched a community permac
 The permaculture project is not only providing vital nutrition for vulnerable households—it is also serving as a space for refugee and host community members to work side by side, building deep social bonds and mutual trust.`,
     gallery: [
       '/_MG_2602.jpg',
-      '/IMG_20260203_172605_579.jpg',
+      '/IMG_20260223_081540_318.jpg',
     ],
     featured: true,
   },
@@ -261,7 +261,7 @@ export const MOCK_PARTNERS = [
     _id: 'partner-1',
     name: 'Community Peace Network',
     website: 'https://acwa.org',
-    logo: '/partner1.png',
+    logo: '/logo.jpg',
     description: 'Grassroots coalition promoting peace and human rights.',
     featured: true,
   },
@@ -269,7 +269,7 @@ export const MOCK_PARTNERS = [
 
 export const MOCK_SITE_SETTINGS = {
   organizationName: 'ARISE COMMUNITY WELFARE ACCESS (ACWA)',
-  logo: '/acwalogo.jpg',
+  logo: '/logo.jpg',
   description: 'A community-based organization in Kakuma, Turkana County, Kenya, committed to peacebuilding, education, child welfare, livelihoods, and health.',
   email: 'arisecwel.acces@gmail.com',
   address: 'Kakuma Refugee Camp & Host Community, Turkana County, Kenya',

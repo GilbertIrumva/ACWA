@@ -9,7 +9,7 @@ export default function StructuredData() {
     name: 'ARISE COMMUNITY WELFARE ACCESS (ACWA)',
     alternateName: 'ACWA Kenya',
     url: baseUrl,
-    logo: `${baseUrl}/icon.png`,
+    logo: `${baseUrl}/logo.jpg`,
     description:
       'A Community Based Organization registered under Act No. 30 of 2021 in Kenya working with refugees and host communities through peacebuilding, education, child welfare, livelihoods, and health.',
     foundingDate: '2024',

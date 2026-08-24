@@ -21,7 +21,7 @@ export default function PeacebuildingSpotlight() {
         <div className="max-w-3xl space-y-6 text-white">
           {/* Badge Tag */}
           <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-[#16A34A] text-[#F0FDF4] text-xs font-semibold uppercase tracking-wider border border-[#22C55E]/40 shadow-md">
-            <Handshake className="w-4 h-4 text-[#D87532]" />
+            <Handshake className="w-4 h-4 text-white" />
             <span>Program Spotlight • Peacebuilding</span>
           </div>
 
@@ -37,7 +37,7 @@ export default function PeacebuildingSpotlight() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
             <div className="p-5 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 space-y-2">
               <div className="flex items-center space-x-2 text-[#22C55E] font-semibold text-base">
-                <MessageSquare className="w-5 h-5 text-[#D87532]" />
+                <MessageSquare className="w-5 h-5 text-white" />
                 <span>Community Peace Dialogues</span>
               </div>
               <p className="text-xs sm:text-sm text-[#D5EBD9]">Regular inter-community forums addressing local resource management and dispute resolution.</p>
@@ -45,7 +45,7 @@ export default function PeacebuildingSpotlight() {
 
             <div className="p-5 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 space-y-2">
               <div className="flex items-center space-x-2 text-[#22C55E] font-semibold text-base">
-                <Users className="w-5 h-5 text-[#D87532]" />
+                <Users className="w-5 h-5 text-white" />
                 <span>Youth Peace Ambassadors</span>
               </div>
               <p className="text-xs sm:text-sm text-[#D5EBD9]">Mobilizing young leaders to act as peace champions and mitigate inter-group conflicts.</p>

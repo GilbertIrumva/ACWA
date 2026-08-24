@@ -95,15 +95,15 @@ export default function MobileNavigation({ isOpen, onClose, navLinks }) {
 
           <div className="bg-[#D5EBD9] p-4 rounded-2xl space-y-2 text-xs text-[#3C5245]">
             <div className="flex items-center space-x-2">
-              <MapPin className="w-4 h-4 text-[#A8875A] shrink-0" />
+              <MapPin className="w-4 h-4 text-white shrink-0" />
               <span>Kakuma Refugee Camp, Turkana, Kenya</span>
             </div>
             <div className="flex items-center space-x-2">
-              <Phone className="w-4 h-4 text-[#A8875A] shrink-0" />
+              <Phone className="w-4 h-4 text-white shrink-0" />
               <span>+254 727236976</span>
             </div>
             <div className="flex items-center space-x-2">
-              <Mail className="w-4 h-4 text-[#A8875A] shrink-0" />
+              <Mail className="w-4 h-4 text-white shrink-0" />
               <span className="truncate">arisecwel.acces@gmail.com</span>
             </div>
           </div>

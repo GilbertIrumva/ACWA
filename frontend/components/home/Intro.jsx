@@ -67,7 +67,7 @@ export default function Intro() {
                   className="bg-[#F0FDF4] dark:bg-[#042F20] p-6 rounded-3xl border border-[#16A34A]/10 dark:border-emerald-700/30 shadow-sm hover:shadow-md transition-all space-y-4"
                 >
                   <div className="w-12 h-12 rounded-2xl bg-[#16A34A] text-[#F0FDF4] flex items-center justify-center">
-                    <Icon className="w-6 h-6 text-[#D5EBD9]" />
+                    <Icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="font-serif font-semibold text-xl text-[#171A17] dark:text-[#F0FDF4]">
                     {item.title}

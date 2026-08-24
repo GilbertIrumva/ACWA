@@ -20,7 +20,7 @@ export default function PartnershipCTA() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 space-y-6">
             <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-[#22C55E] border border-[#A8875A]/40 text-[#D5EBD9] text-xs font-semibold uppercase tracking-wider">
-              <Handshake className="w-4 h-4 text-[#A8875A]" />
+              <Handshake className="w-4 h-4 text-white" />
               <span>Institutional Collaboration</span>
             </div>
 
@@ -54,7 +54,7 @@ export default function PartnershipCTA() {
                     className="flex items-center space-x-3 p-3 rounded-xl bg-[#16A34A]/60 border border-[#F0FDF4]/10 text-xs sm:text-sm text-[#D5EBD9]"
                   >
                     <div className="w-8 h-8 rounded-lg bg-[#A8875A]/20 flex items-center justify-center shrink-0">
-                      <Icon className="w-4 h-4 text-[#A8875A]" />
+                      <Icon className="w-4 h-4 text-white" />
                     </div>
                     <span>{item.label}</span>
                   </div>
@@ -63,7 +63,7 @@ export default function PartnershipCTA() {
             </div>
 
             <div className="pt-4 border-t border-[#F0FDF4]/10 text-xs text-[#D5EBD9]/70 flex items-center space-x-2">
-              <ShieldAlert className="w-4 h-4 text-[#A8875A] shrink-0" />
+              <ShieldAlert className="w-4 h-4 text-white shrink-0" />
               <span>Full organizational compliance under Kenyan CBO registration laws.</span>
             </div>
           </div>

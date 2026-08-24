@@ -1,7 +1,7 @@
 import React from 'react';
 import Container from '../ui/Container';
 import Button from '../ui/Button';
-import { ArrowRight, Heart, Shield, Users, Sparkles } from 'lucide-react';
+import { ArrowRight, Heart, Sparkles } from 'lucide-react';
 
 export default function Hero() {
   return (
@@ -21,7 +21,7 @@ export default function Hero() {
         <div className="max-w-3xl space-y-6 text-left text-white">
           {/* Pill Tag */}
           <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-[#16A34A] text-[#F0FDF4] text-xs font-semibold uppercase tracking-wider shadow-lg border border-[#22C55E]/40">
-            <Sparkles className="w-4 h-4 text-[#D87532]" />
+            <Sparkles className="w-4 h-4 text-white" />
             <span>Registered CBO in Kenya • Kakuma Refugee Camp</span>
           </div>
 
@@ -45,39 +45,6 @@ export default function Hero() {
               <span>Explore Our Programs</span>
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
-          </div>
-
-          {/* Trust Markers over image */}
-          <div className="pt-8 border-t border-white/20 grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs text-[#D5EBD9]">
-            <div className="flex items-center space-x-3">
-              <div className="w-9 h-9 rounded-full bg-[#16A34A] flex items-center justify-center text-white shrink-0 shadow-md">
-                <Shield className="w-4 h-4" />
-              </div>
-              <div>
-                <strong className="block text-white font-semibold">Community-Led</strong>
-                <span>Rooted in Kakuma</span>
-              </div>
-            </div>
-
-            <div className="flex items-center space-x-3">
-              <div className="w-9 h-9 rounded-full bg-[#16A34A] flex items-center justify-center text-white shrink-0 shadow-md">
-                <Users className="w-4 h-4" />
-              </div>
-              <div>
-                <strong className="block text-white font-semibold">Inclusive Focus</strong>
-                <span>Refugees & Hosts</span>
-              </div>
-            </div>
-
-            <div className="flex items-center space-x-3">
-              <div className="w-9 h-9 rounded-full bg-[#16A34A] flex items-center justify-center text-white shrink-0 shadow-md">
-                <Sparkles className="w-4 h-4 text-[#D87532]" />
-              </div>
-              <div>
-                <strong className="block text-white font-semibold">Registered CBO</strong>
-                <span>Act No. 30 of 2021</span>
-              </div>
-            </div>
           </div>
         </div>
       </Container>

@@ -44,7 +44,7 @@ export default function ImpactStats() {
           />
           
           <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-[#22C55E] border border-[#A8875A]/40 text-xs text-[#D5EBD9] mt-4">
-            <ShieldCheck className="w-4 h-4 text-[#A8875A]" />
+            <ShieldCheck className="w-4 h-4 text-white" />
             <span>Data Transparency: Numerical metrics are validated and managed via Sanity CMS</span>
           </div>
         </div>
@@ -59,8 +59,8 @@ export default function ImpactStats() {
                 className="bg-[#22C55E]/50 backdrop-blur-sm p-6 rounded-3xl border border-[#F0FDF4]/15 flex flex-col justify-between hover:bg-[#22C55E]/80 transition-colors"
               >
                 <div className="space-y-4">
-                  <div className="w-12 h-12 rounded-2xl bg-[#F0FDF4] text-[#16A34A] flex items-center justify-center shadow-md">
-                    <Icon className="w-6 h-6" />
+                  <div className="w-12 h-12 rounded-2xl bg-[#16A34A] text-white flex items-center justify-center shadow-md">
+                    <Icon className="w-6 h-6 text-white" />
                   </div>
 
                   <div>
@@ -78,7 +78,7 @@ export default function ImpactStats() {
                 </div>
 
                 <div className="pt-6 mt-6 border-t border-[#F0FDF4]/10 flex items-center space-x-2 text-xs text-[#D5EBD9]">
-                  <CheckCircle2 className="w-4 h-4 text-[#A8875A]" />
+                  <CheckCircle2 className="w-4 h-4 text-white" />
                   <span>Grassroots Action Verified</span>
                 </div>
               </div>

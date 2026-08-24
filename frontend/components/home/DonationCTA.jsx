@@ -33,15 +33,15 @@ export default function DonationCTA() {
 
           <div className="pt-6 border-t border-[#16A34A]/10 dark:border-emerald-800/40 flex flex-wrap items-center justify-center gap-6 text-xs text-[#4A5550] dark:text-[#D5EBD9]/80">
             <span className="flex items-center space-x-1.5">
-              <ShieldCheck className="w-4 h-4 text-[#16A34A] dark:text-[#22C55E]" />
+              <ShieldCheck className="w-4 h-4 text-white" />
               <span>100% Direct Program Impact</span>
             </span>
             <span className="flex items-center space-x-1.5">
-              <ShieldCheck className="w-4 h-4 text-[#16A34A] dark:text-[#22C55E]" />
+              <ShieldCheck className="w-4 h-4 text-white" />
               <span>Financial Accountability</span>
             </span>
             <span className="flex items-center space-x-1.5">
-              <ShieldCheck className="w-4 h-4 text-[#16A34A] dark:text-[#22C55E]" />
+              <ShieldCheck className="w-4 h-4 text-white" />
               <span>Secure Payment Gateway</span>
             </span>
           </div>

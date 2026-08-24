@@ -106,7 +106,7 @@ export default function Programs() {
                   {/* Content body */}
                   <div className="p-6 sm:p-8 space-y-3">
                     <div className="flex items-center space-x-2 text-[#A8875A] dark:text-[#D87532]">
-                      <Icon className="w-5 h-5" />
+                      <Icon className="w-5 h-5 text-white" />
                       <span className="text-xs font-bold uppercase tracking-wider">ACWA Program</span>
                     </div>
 
@@ -127,7 +127,7 @@ export default function Programs() {
                     className="inline-flex items-center text-sm font-semibold text-[#16A34A] dark:text-[#22C55E] group-hover:text-[#D87532] transition-colors"
                   >
                     <span>Read Full Program Details</span>
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-4 h-4 ml-2 text-white group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>
               </div>

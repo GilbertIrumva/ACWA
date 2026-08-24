@@ -64,7 +64,7 @@ export default function TargetGroups() {
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
                     <div className="w-12 h-12 rounded-2xl bg-[#16A34A] text-[#F0FDF4] flex items-center justify-center">
-                      <Icon className="w-6 h-6 text-[#A8875A]" />
+                      <Icon className="w-6 h-6 text-white" />
                     </div>
                     <span className="text-[11px] font-semibold text-[#16A34A] dark:text-[#22C55E] bg-[#16A34A]/10 dark:bg-[#22C55E]/20 px-3 py-1 rounded-full border border-[#16A34A]/15 dark:border-emerald-600/30">
                       {item.tag}
@@ -81,7 +81,7 @@ export default function TargetGroups() {
                 </div>
 
                 <div className="pt-4 border-t border-[#16A34A]/10 dark:border-emerald-800/40 flex items-center space-x-2 text-xs text-[#16A34A] dark:text-[#22C55E] font-medium">
-                  <ShieldCheck className="w-4 h-4 text-[#A8875A] dark:text-[#D87532]" />
+                  <ShieldCheck className="w-4 h-4 text-white" />
                   <span>Dignified & Inclusive Action</span>
                 </div>
               </div>
