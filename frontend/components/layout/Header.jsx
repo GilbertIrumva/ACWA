@@ -186,8 +186,8 @@ export default function Header() {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(true)}
-              className="p-2.5 rounded-none lg:hidden focus:outline-none text-gray-900 dark:text-white bg-gray-100 dark:bg-emerald-900/40"
-              aria-label="Open menu"
+              className="p-2.5 rounded-xl lg:hidden focus:outline-none text-gray-900 dark:text-white bg-gray-100 dark:bg-[#064E3B] hover:bg-[#2E7D32] hover:text-white dark:hover:bg-[#2E7D32] border border-gray-200 dark:border-emerald-800/40 transition-all shadow-sm active:scale-95"
+              aria-label="Open Mobile Menu"
             >
               <Menu className="w-6 h-6" />
             </button>
