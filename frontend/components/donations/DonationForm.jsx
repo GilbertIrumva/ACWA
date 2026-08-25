@@ -169,7 +169,7 @@ export default function DonationForm() {
 
             {/* Custom Amount input */}
             <div className="relative pt-2">
-              <span className="absolute left-4 top-5 text-sm font-bold text-[#A8875A] dark:text-[#D87532]">$</span>
+              <span className="absolute left-4 top-5 text-sm font-bold text-[#22C55E] dark:text-[#22C55E]">$</span>
               <input
                 type="number"
                 min="1"
@@ -211,7 +211,7 @@ export default function DonationForm() {
 
             <div>
               <label htmlFor="donorName" className="block text-xs font-semibold text-[#171A17] dark:text-[#F0FDF4] uppercase tracking-wider mb-1">
-                Full Name <span className="text-[#D87532]">*</span>
+                Full Name <span className="text-[#16A34A] dark:text-[#22C55E]">*</span>
               </label>
               <input
                 type="text"
@@ -227,7 +227,7 @@ export default function DonationForm() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label htmlFor="donorEmail" className="block text-xs font-semibold text-[#171A17] dark:text-[#F0FDF4] uppercase tracking-wider mb-1">
-                  Email Address <span className="text-[#D87532]">*</span>
+                  Email Address <span className="text-[#16A34A] dark:text-[#22C55E]">*</span>
                 </label>
                 <input
                   type="email"
@@ -258,7 +258,7 @@ export default function DonationForm() {
 
           <Button
             type="submit"
-            variant="orange"
+            variant="primary"
             size="lg"
             className="w-full shadow-lg"
             disabled={status.loading}

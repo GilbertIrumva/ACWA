@@ -53,7 +53,7 @@ export default function LivelihoodsSpotlight() {
           </div>
 
           <div className="pt-2">
-            <Button href="/programs/livelihoods" variant="orange" size="md" className="shadow-lg">
+            <Button href="/programs/livelihoods" variant="primary" size="md" className="shadow-lg">
               <span>Discover Permaculture & Livelihoods</span>
               <ArrowRight className="w-4 h-4 ml-2" />
             </Button>

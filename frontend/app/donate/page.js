@@ -33,7 +33,7 @@ export default function DonatePage() {
         <Container className="relative z-20">
           <div className="max-w-3xl space-y-4 text-left">
             <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-[#16A34A] border border-[#22C55E]/40 text-[#D5EBD9] text-xs font-semibold uppercase tracking-wider shadow-lg">
-              <Heart className="w-4 h-4 text-[#D87532] fill-[#D87532]" />
+              <Heart className="w-4 h-4 text-[#DCFCE7] fill-[#DCFCE7]" />
               <span>Direct Community Impact</span>
             </div>
 
@@ -76,7 +76,7 @@ export default function DonatePage() {
               {/* Guarantees */}
               <div className="p-6 rounded-3xl bg-[#F0FDF4] dark:bg-[#042F20] border border-[#16A34A]/15 dark:border-emerald-700/40 space-y-3 text-xs text-[#4A5550] dark:text-[#D5EBD9]/85">
                 <div className="flex items-center space-x-2 text-[#16A34A] dark:text-[#22C55E] font-semibold text-sm">
-                  <ShieldCheck className="w-5 h-5 text-[#A8875A] dark:text-[#D87532]" />
+                  <ShieldCheck className="w-5 h-5 text-[#22C55E] dark:text-[#22C55E]" />
                   <span>Financial Accountability Guarantee</span>
                 </div>
                 <p className="leading-relaxed">

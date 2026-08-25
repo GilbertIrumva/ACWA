@@ -23,8 +23,8 @@ export default function EducationProgramPage() {
       <section className="bg-[#16A34A] dark:bg-[#064E3B] text-[#F0FDF4] py-16 sm:py-24 transition-colors duration-200">
         <Container>
           <div className="max-w-3xl space-y-6">
-            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-[#22C55E] dark:bg-[#042F20] border border-[#A8875A]/40 dark:border-emerald-600/40 text-[#D5EBD9] text-xs font-semibold uppercase tracking-wider">
-              <GraduationCap className="w-4 h-4 text-[#A8875A] dark:text-[#D87532]" />
+            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-[#22C55E] dark:bg-[#042F20] border border-[#22C55E]/40 dark:border-emerald-600/40 text-[#D5EBD9] text-xs font-semibold uppercase tracking-wider">
+              <GraduationCap className="w-4 h-4 text-[#22C55E] dark:text-[#22C55E]" />
               <span>Program Specification</span>
             </div>
             <h1 className="font-serif text-4xl sm:text-5xl font-bold tracking-tight text-white">
@@ -81,7 +81,7 @@ export default function EducationProgramPage() {
           </div>
 
           <div className="mt-12 text-center">
-            <Button href="/donate" variant="orange" size="lg">
+            <Button href="/donate" variant="primary" size="lg">
               <span>Sponsor a Child&apos;s Education</span>
               <ArrowRight className="w-4 h-4 ml-2" />
             </Button>

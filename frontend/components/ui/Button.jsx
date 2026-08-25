@@ -18,8 +18,8 @@ export default function Button({
   const variants = {
     primary: 'bg-[#16A34A] hover:bg-[#15803D] active:bg-[#166534] text-[#F0FDF4] shadow-sm hover:shadow active:shadow-none focus-visible:ring-[#16A34A]',
     secondary: 'bg-[#D5EBD9] hover:bg-[#C2E3C7] active:bg-[#B0DCB6] text-[#16A34A] border border-[#16A34A]/20 focus-visible:ring-[#16A34A]',
-    orange: 'bg-[#D87532] hover:bg-[#C26223] active:bg-[#A8501B] text-white shadow-sm hover:shadow active:shadow-none focus-visible:ring-[#D87532]',
-    earth: 'bg-[#A8875A] hover:bg-[#92744B] active:bg-[#7D623C] text-white shadow-sm focus-visible:ring-[#A8875A]',
+    orange: 'bg-[#16A34A] hover:bg-[#15803D] active:bg-[#166534] text-[#F0FDF4] shadow-sm hover:shadow active:shadow-none focus-visible:ring-[#16A34A]',
+    earth: 'bg-[#2E7D32] hover:bg-[#1B5E20] active:bg-[#0D3813] text-white shadow-sm focus-visible:ring-[#2E7D32]',
     outline: 'border-2 border-[#16A34A] text-[#16A34A] hover:bg-[#16A34A] hover:text-[#F0FDF4] active:bg-[#15803D] active:border-[#15803D] focus-visible:ring-[#16A34A]',
     ghost: 'text-[#16A34A] hover:bg-[#16A34A]/10 active:bg-[#16A34A]/20 focus-visible:ring-[#16A34A]',
   };

@@ -39,7 +39,7 @@ export default function Intro() {
             WHY ACWA? WHY NOW?
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white leading-tight">
-            We are a refugee and host community organization creating pathways for displaced people to learn, earn, and lead change.
+            Empower vulnerable communities through education, Peace building, capacity building and sustainable development initiatives.
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl mx-auto pt-2">
             Through education, digital inclusion, livelihoods, peacebuilding, child protection, and community welfare, we help refugees and host communities build sustainable futures with dignity and hope.

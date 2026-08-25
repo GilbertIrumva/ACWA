@@ -126,7 +126,7 @@ export default function PartnershipForm() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <div>
               <label htmlFor="name" className="block text-xs font-semibold text-[#171A17] dark:text-[#F0FDF4] uppercase tracking-wider mb-2">
-                Your Full Name <span className="text-[#D87532]">*</span>
+                Your Full Name <span className="text-[#16A34A] dark:text-[#22C55E]">*</span>
               </label>
               <input
                 type="text"
@@ -142,7 +142,7 @@ export default function PartnershipForm() {
 
             <div>
               <label htmlFor="organization" className="block text-xs font-semibold text-[#171A17] dark:text-[#F0FDF4] uppercase tracking-wider mb-2">
-                Organization Name <span className="text-[#D87532]">*</span>
+                Organization Name <span className="text-[#16A34A] dark:text-[#22C55E]">*</span>
               </label>
               <input
                 type="text"
@@ -160,7 +160,7 @@ export default function PartnershipForm() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <div>
               <label htmlFor="email" className="block text-xs font-semibold text-[#171A17] dark:text-[#F0FDF4] uppercase tracking-wider mb-2">
-                Official Email <span className="text-[#D87532]">*</span>
+                Official Email <span className="text-[#16A34A] dark:text-[#22C55E]">*</span>
               </label>
               <input
                 type="email"
@@ -212,7 +212,7 @@ export default function PartnershipForm() {
 
           <div>
             <label htmlFor="message" className="block text-xs font-semibold text-[#171A17] dark:text-[#F0FDF4] uppercase tracking-wider mb-2">
-              Partnership Proposal / Message <span className="text-[#D87532]">*</span>
+              Partnership Proposal / Message <span className="text-[#16A34A] dark:text-[#22C55E]">*</span>
             </label>
             <textarea
               id="message"
@@ -228,7 +228,7 @@ export default function PartnershipForm() {
 
           <Button
             type="submit"
-            variant="orange"
+            variant="primary"
             size="lg"
             className="w-full shadow-md"
             disabled={status.loading}

@@ -15,6 +15,8 @@ import {
   Lightbulb,
 } from 'lucide-react';
 
+import TeamSection from '../../components/about/TeamSection';
+
 export const metadata = {
   title: 'About ACWA | Vision, Mission & Core Values',
   description:
@@ -78,7 +80,7 @@ export default function AboutPage() {
       </section>
 
       {/* Vision & Mission Grid with Visual Image Column */}
-      <section className="bg-white dark:bg-[#042F20]">
+      <section id="vision-mission" className="bg-white dark:bg-[#042F20] scroll-mt-24">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
             {/* Vision & Mission Text Cards */}
@@ -160,7 +162,7 @@ export default function AboutPage() {
       </section>
 
       {/* Core Values Section */}
-      <section className="py-20 bg-white dark:bg-[#042F20] transition-colors duration-200">
+      <section id="core-values" className="py-20 bg-white dark:bg-[#042F20] transition-colors duration-200 scroll-mt-24">
         <Container>
           <SectionHeading
             badge="OUR CORE VALUES"
@@ -189,6 +191,9 @@ export default function AboutPage() {
           </div>
         </Container>
       </section>
+
+      {/* Team Member Dropdown Section */}
+      <TeamSection />
 
       {/* Strategic Objectives */}
       <section className="bg-[#1B5E20] text-white py-20 sm:py-28 transition-colors duration-200">

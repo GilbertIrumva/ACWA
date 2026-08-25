@@ -23,8 +23,8 @@ export default function PeacebuildingProgramPage() {
       <section className="bg-[#16A34A] dark:bg-[#064E3B] text-[#F0FDF4] py-16 sm:py-24 transition-colors duration-200">
         <Container>
           <div className="max-w-3xl space-y-6">
-            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-[#22C55E] dark:bg-[#042F20] border border-[#A8875A]/40 dark:border-emerald-600/40 text-[#D5EBD9] text-xs font-semibold uppercase tracking-wider">
-              <Handshake className="w-4 h-4 text-[#A8875A] dark:text-[#D87532]" />
+            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-[#22C55E] dark:bg-[#042F20] border border-[#22C55E]/40 dark:border-emerald-600/40 text-[#D5EBD9] text-xs font-semibold uppercase tracking-wider">
+              <Handshake className="w-4 h-4 text-[#22C55E] dark:text-[#22C55E]" />
               <span>Program Specification</span>
             </div>
             <h1 className="font-serif text-4xl sm:text-5xl font-bold tracking-tight text-white">
@@ -51,7 +51,7 @@ export default function PeacebuildingProgramPage() {
               </p>
 
               <div className="p-6 rounded-2xl bg-[#D5EBD9] dark:bg-[#064E3B]/90 border border-[#16A34A]/15 dark:border-emerald-700/40 space-y-2">
-                <span className="text-xs font-bold text-[#A8875A] dark:text-[#D87532] uppercase tracking-wider block">Target Beneficiaries</span>
+                <span className="text-xs font-bold text-[#22C55E] dark:text-[#22C55E] uppercase tracking-wider block">Target Beneficiaries</span>
                 <p className="text-sm font-medium text-[#16A34A] dark:text-[#22C55E]">
                   Refugee leaders, village elders, youth groups, women peace committees, and local administration.
                 </p>
@@ -88,7 +88,7 @@ export default function PeacebuildingProgramPage() {
           </div>
 
           <div className="mt-12 text-center">
-            <Button href="/partner-with-us" variant="orange" size="lg">
+            <Button href="/partner-with-us" variant="primary" size="lg">
               <span>Partner on Peacebuilding Initiatives</span>
               <ArrowRight className="w-4 h-4 ml-2" />
             </Button>

@@ -15,9 +15,9 @@ module.exports = {
           lightgreen: '#DCFCE7', // Light green tint
           cream: '#D5EBD9',      // Soft light green container fill
           offwhite: '#F0FDF4',   // Canvas light green background
-          earth: '#A8875A',      // Warm Earth secondary accent
+          earth: '#2E7D32',      // Warm Earth secondary accent
           earthlight: '#E6F4EA', // Light Earth/Green tint
-          orange: '#D87532',     // Warm Orange action highlight
+          orange: '#16A34A',     // Action highlight mapped to signature ACWA Green
           dark: '#171A17',       // Editorial Dark Text
           muted: '#2D5A3B',      // Subtitle & secondary body text
           border: '#B8E3C3',     // Soft tactile light green border

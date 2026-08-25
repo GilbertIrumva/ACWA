@@ -1,11 +1,19 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import ThemeToggle from '../ui/ThemeToggle';
-import { X, Heart, Phone, Mail, MapPin } from 'lucide-react';
+import { X, Heart, Phone, Mail, MapPin, ChevronDown, ChevronUp } from 'lucide-react';
 
 export default function MobileNavigation({ isOpen, onClose, navLinks }) {
+  const [expandedKeys, setExpandedKeys] = useState([]);
+
+  const toggleDropdown = (key) => {
+    setExpandedKeys((prev) =>
+      prev.includes(key) ? prev.filter((k) => k !== key) : [...prev, key]
+    );
+  };
+
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -33,7 +41,7 @@ export default function MobileNavigation({ isOpen, onClose, navLinks }) {
         aria-hidden="true"
       />
 
-      {/* Drawer matching SIR Africa */}
+      {/* Drawer */}
       <div className="fixed inset-y-0 right-0 z-50 w-full max-w-xs bg-white dark:bg-[#042F20] shadow-2xl flex flex-col justify-between overflow-y-auto p-6">
         <div>
           {/* Header row */}
@@ -42,7 +50,7 @@ export default function MobileNavigation({ isOpen, onClose, navLinks }) {
               <img
                 src="/logo.jpg"
                 alt="ACWA Logo"
-                className="w-9 h-9 rounded-none object-cover border border-emerald-600/30"
+                className="w-9 h-9 object-contain bg-transparent border-0 shadow-none rounded-none shrink-0"
               />
               <div>
                 <span className="font-serif font-extrabold text-xl text-[#2E7D32] dark:text-[#4CAF50] block leading-none">
@@ -69,18 +77,64 @@ export default function MobileNavigation({ isOpen, onClose, navLinks }) {
 
           {/* Navigation links */}
           <nav className="mt-6 flex flex-col space-y-1">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                prefetch={true}
-                onClick={onClose}
-                className="px-4 py-3 text-base font-bold text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-[#064E3B] hover:text-[#2E7D32] dark:hover:text-[#4CAF50] border-b border-gray-100 dark:border-emerald-950 flex items-center justify-between"
-              >
-                <span>{link.name}</span>
-                <span className="text-[#2E7D32] dark:text-[#4CAF50] font-normal">→</span>
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              if (link.isDropdown && link.items) {
+                const isExpanded = expandedKeys.includes(link.dropdownKey);
+
+                return (
+                  <div key={link.name} className="border-b border-gray-100 dark:border-emerald-950">
+                    <div className="flex items-center justify-between px-4 py-3">
+                      <Link
+                        href={link.href}
+                        prefetch={true}
+                        onClick={onClose}
+                        className="text-base font-bold text-gray-900 dark:text-white hover:text-[#2E7D32] dark:hover:text-[#4CAF50]"
+                      >
+                        {link.name}
+                      </Link>
+                      <button
+                        type="button"
+                        onClick={() => toggleDropdown(link.dropdownKey)}
+                        className="p-1 text-[#2E7D32] dark:text-[#4CAF50]"
+                        aria-label={`Toggle ${link.name} sub-menu`}
+                      >
+                        {isExpanded ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+                      </button>
+                    </div>
+
+                    {/* Sub links */}
+                    {isExpanded && (
+                      <div className="bg-gray-50 dark:bg-[#064E3B]/40 py-2 px-3 space-y-1 rounded-xl my-1 border border-gray-100 dark:border-emerald-800/40">
+                        {link.items.map((item) => (
+                          <Link
+                            key={item.name}
+                            href={item.href}
+                            prefetch={true}
+                            onClick={onClose}
+                            className="block px-3 py-2 text-xs font-bold text-black dark:text-white hover:text-[#16A34A] dark:hover:text-[#22C55E]"
+                          >
+                            {item.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+
+              return (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  prefetch={true}
+                  onClick={onClose}
+                  className="px-4 py-3 text-base font-bold text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-[#064E3B] hover:text-[#2E7D32] dark:hover:text-[#4CAF50] border-b border-gray-100 dark:border-emerald-950 flex items-center justify-between"
+                >
+                  <span>{link.name}</span>
+                  <span className="text-[#2E7D32] dark:text-[#4CAF50] font-normal">→</span>
+                </Link>
+              );
+            })}
           </nav>
         </div>
 

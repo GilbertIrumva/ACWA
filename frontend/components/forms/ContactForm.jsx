@@ -121,7 +121,7 @@ export default function ContactForm() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <div>
               <label htmlFor="name" className="block text-xs font-semibold text-[#171A17] dark:text-[#F0FDF4] uppercase tracking-wider mb-2">
-                Your Full Name <span className="text-[#D87532]">*</span>
+                Your Full Name <span className="text-[#16A34A] dark:text-[#22C55E]">*</span>
               </label>
               <input
                 type="text"
@@ -137,7 +137,7 @@ export default function ContactForm() {
 
             <div>
               <label htmlFor="email" className="block text-xs font-semibold text-[#171A17] dark:text-[#F0FDF4] uppercase tracking-wider mb-2">
-                Email Address <span className="text-[#D87532]">*</span>
+                Email Address <span className="text-[#16A34A] dark:text-[#22C55E]">*</span>
               </label>
               <input
                 type="email"
@@ -170,7 +170,7 @@ export default function ContactForm() {
 
             <div>
               <label htmlFor="subject" className="block text-xs font-semibold text-[#171A17] dark:text-[#F0FDF4] uppercase tracking-wider mb-2">
-                Subject <span className="text-[#D87532]">*</span>
+                Subject <span className="text-[#16A34A] dark:text-[#22C55E]">*</span>
               </label>
               <input
                 type="text"
@@ -187,7 +187,7 @@ export default function ContactForm() {
 
           <div>
             <label htmlFor="message" className="block text-xs font-semibold text-[#171A17] dark:text-[#F0FDF4] uppercase tracking-wider mb-2">
-              Message <span className="text-[#D87532]">*</span>
+              Message <span className="text-[#16A34A] dark:text-[#22C55E]">*</span>
             </label>
             <textarea
               id="message"

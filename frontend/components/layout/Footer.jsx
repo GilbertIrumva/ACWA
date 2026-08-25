@@ -51,7 +51,7 @@ export default function Footer() {
                 <img
                   src="/logo.jpg"
                   alt="ACWA Logo"
-                  className="w-10 h-10 rounded-none object-cover border border-[#2E7D32]"
+                  className="w-10 h-10 object-contain bg-transparent border-0 shadow-none rounded-none shrink-0"
                 />
                 <div>
                   <span className="font-serif font-extrabold text-2xl tracking-tight block leading-none text-[#2E7D32] dark:text-[#4CAF50]">
