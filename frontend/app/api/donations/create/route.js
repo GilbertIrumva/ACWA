@@ -32,8 +32,9 @@ export async function POST(request) {
     return NextResponse.json({
       success: true,
       transactionId: donationResult.transactionId,
+      checkoutUrl: donationResult.checkoutUrl || null,
       status: donationResult.status,
-      message: 'Thank you! Your donation request has been initiated.',
+      message: donationResult.message || 'Thank you! Your donation request has been initiated.',
     });
   } catch (error) {
     console.error('Donation API Error:', error);

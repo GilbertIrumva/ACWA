@@ -9,8 +9,8 @@ export default function PeacebuildingSpotlight() {
       {/* Background Image Behind Fonts */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/peace-building-and.jpg"
-          alt="Community members participating in an ACWA peace dialogue in Kakuma"
+          src="/Peace Dialogue & Reconciliation.jpg"
+          alt="Peace Dialogue & Reconciliation in Kakuma supported by ACWA"
           className="w-full h-full object-cover object-center"
         />
         {/* Dark Gradient Overlay */}

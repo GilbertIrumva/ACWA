@@ -18,7 +18,7 @@ export default function TermsPage() {
           <div className="prose prose-sm text-[#4A5550] space-y-4 leading-relaxed">
             <h2 className="font-serif font-bold text-xl text-[#171A17] pt-4">1. Organization Governance</h2>
             <p>
-              ARISE COMMUNITY WELFARE ACCESS (ACWA) is established under the laws of Kenya and registered under the Community Groups Registration Act No. 30 of 2021 (Reg. No. 30 of 2021 in 2025). By using this website, you agree to comply with these terms.
+              ARISE COMMUNITY WELFARE ACCESS (ACWA) is established under the laws of Kenya and registered under the Community Groups Registration Act No. 30 of 2021 (Reg. No. DSD/23/124/02/152725). By using this website, you agree to comply with these terms.
             </p>
 
             <h2 className="font-serif font-bold text-xl text-[#171A17] pt-4">2. Intellectual Property & Photography</h2>

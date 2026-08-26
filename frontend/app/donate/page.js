@@ -80,7 +80,7 @@ export default function DonatePage() {
                   <span>Financial Accountability Guarantee</span>
                 </div>
                 <p className="leading-relaxed">
-                  ACWA is a registered CBO in Kenya (Reg. No. 30 of 2021). All donations are processed through secure server-side adapters and audited for direct field allocation.
+                  ACWA is a registered CBO in Kenya (Reg. No. DSD/23/124/02/152725). All donations are processed through secure server-side adapters and audited for direct field allocation.
                 </p>
               </div>
             </div>

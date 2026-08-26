@@ -32,8 +32,8 @@ export default function EducationSpotlight() {
       {/* Background Image Behind Fonts */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/education.jpg"
-          alt="Children learning together in a classroom supported by ACWA"
+          src="/Educational Support Distribution.jpg"
+          alt="Educational Support Distribution by ACWA in Kakuma"
           className="w-full h-full object-cover object-center"
         />
         {/* Dark Gradient Overlay */}

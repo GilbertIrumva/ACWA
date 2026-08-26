@@ -54,8 +54,8 @@ export default function EducationProgramPage() {
             <div className="lg:col-span-6">
               <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-xl border border-[#16A34A]/15 dark:border-emerald-700/40">
                 <img
-                  src="/education.jpg"
-                  alt="Children learning in school supported by ACWA"
+                  src="/Educational Support Distribution.jpg"
+                  alt="Educational Support Distribution in Kakuma by ACWA"
                   className="w-full h-full object-cover"
                 />
               </div>

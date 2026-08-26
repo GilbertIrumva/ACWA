@@ -14,7 +14,7 @@ export default function Programs() {
       icon: Handshake,
       description:
         'Facilitating grassroots community peace dialogues, conflict resolution training, peace awareness, and structured youth engagement between refugee and host communities.',
-      image: '/peace-building-and.jpg',
+      image: '/Peace Dialogue & Reconciliation.jpg',
       href: '/programs/peacebuilding',
     },
     {
@@ -25,7 +25,7 @@ export default function Programs() {
       icon: ShieldCheck,
       description:
         'Providing school support for vulnerable children, remedial classes, learning materials distribution, and functional English courses for adults.',
-      image: '/education.jpg',
+      image: '/Educational Support Distribution.jpg',
       href: '/programs/education',
     },
     {

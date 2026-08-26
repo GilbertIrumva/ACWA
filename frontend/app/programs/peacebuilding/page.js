@@ -61,8 +61,8 @@ export default function PeacebuildingProgramPage() {
             <div className="lg:col-span-6">
               <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-xl border border-[#16A34A]/15 dark:border-emerald-700/40">
                 <img
-                  src="/peace-building-and.jpg"
-                  alt="Community peace dialogue"
+                  src="/Peace Dialogue & Reconciliation.jpg"
+                  alt="Peace Dialogue & Reconciliation in Kakuma by ACWA"
                   className="w-full h-full object-cover"
                 />
               </div>

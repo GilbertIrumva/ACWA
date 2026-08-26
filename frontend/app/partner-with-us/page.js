@@ -66,7 +66,7 @@ export default function PartnerWithUsPage() {
                     <span>Legal Compliance</span>
                   </div>
                   <p className="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
-                    Registered under the Community Groups Registration Act No. 30 of 2021 in Kenya (2025). Full statutory compliance and local accountability.
+                    Registered under the Community Groups Registration Act No. 30 of 2021 in Kenya (Reg. No. DSD/23/124/02/152725). Full statutory compliance and local accountability.
                   </p>
                 </div>
 

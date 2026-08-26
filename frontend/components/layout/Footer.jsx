@@ -63,7 +63,7 @@ export default function Footer() {
                 </div>
               </Link>
               <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed max-w-sm">
-                ARISE COMMUNITY WELFARE ACCESS (ACWA) is a community-based organization registered in Kenya under Act No. 30 of 2021 (Reg No. 30 of 2021), dedicated to creating pathways to peace, education, livelihoods, and child protection in Kakuma Refugee Camp and Turkana County.
+                ARISE COMMUNITY WELFARE ACCESS (ACWA) is a community-based organization registered in Kenya under Act No. 30 of 2021 (Reg No. DSD/23/124/02/152725), dedicated to creating pathways to peace, education, livelihoods, and child protection in Kakuma Refugee Camp and Turkana County.
               </p>
             </div>
 
@@ -143,7 +143,7 @@ export default function Footer() {
                 <a href="#" aria-label="Twitter" className="p-2 bg-gray-200 dark:bg-emerald-900/40 hover:bg-[#2E7D32] hover:text-white transition-colors">
                   <Twitter className="w-4 h-4" />
                 </a>
-                <a href="#" aria-label="LinkedIn" className="p-2 bg-gray-200 dark:bg-emerald-900/40 hover:bg-[#2E7D32] hover:text-white transition-colors">
+                <a href="https://www.linkedin.com/in/arise-community-welfare-access-acwa-65a81635b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="p-2 bg-gray-200 dark:bg-emerald-900/40 hover:bg-[#2E7D32] hover:text-white transition-colors">
                   <Linkedin className="w-4 h-4" />
                 </a>
                 <a href="#" aria-label="Instagram" className="p-2 bg-gray-200 dark:bg-emerald-900/40 hover:bg-[#2E7D32] hover:text-white transition-colors">

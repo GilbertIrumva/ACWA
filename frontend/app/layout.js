@@ -11,7 +11,7 @@ export const metadata = {
     template: '%s | ACWA Kenya',
   },
   description:
-    'ACWA is a Community Based Organization (Reg. No. 30 of 2021) in Kenya working with refugees and host communities through peacebuilding, education, child protection, livelihoods, and health.',
+    'ACWA is a registered Community Based Organization in Kenya (Reg. No. DSD/23/124/02/152725) empowering refugees and host communities in Kakuma through peacebuilding, education, child protection, livelihoods, and health.',
   keywords: [
     'ACWA',
     'Arise Community Welfare Access',
@@ -26,12 +26,25 @@ export const metadata = {
   authors: [{ name: 'ACWA Organization' }],
   creator: 'ACWA',
   publisher: 'ARISE COMMUNITY WELFARE ACCESS',
+  icons: {
+    icon: '/logo.jpg',
+    shortcut: '/logo.jpg',
+    apple: '/logo.jpg',
+  },
   openGraph: {
     title: 'ARISE COMMUNITY WELFARE ACCESS (ACWA)',
     description:
       'Building peaceful, empowered and self-reliant refugee and host communities in Kakuma, Turkana County, Kenya.',
     url: 'https://acwakenya.org',
     siteName: 'ACWA Kenya',
+    images: [
+      {
+        url: '/ACWA Executive Committee & Field Team.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'ACWA Leadership and Field Team in Kakuma',
+      },
+    ],
     locale: 'en_US',
     type: 'website',
   },
@@ -40,6 +53,7 @@ export const metadata = {
     title: 'ARISE COMMUNITY WELFARE ACCESS (ACWA)',
     description:
       'Building peaceful, empowered and self-reliant refugee and host communities in Kakuma, Turkana County, Kenya.',
+    images: ['/ACWA Executive Committee & Field Team.jpg'],
   },
   robots: {
     index: true,

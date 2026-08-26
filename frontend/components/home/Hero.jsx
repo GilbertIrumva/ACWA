@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import Container from '../ui/Container';
 import Link from 'next/link';
@@ -6,31 +8,49 @@ import { ArrowRight } from 'lucide-react';
 export default function Hero() {
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden py-24 sm:py-32">
-      {/* Full-Screen Background Image & Dark Overlay */}
-      <div className="absolute inset-0 z-0">
+      {/* Dynamic Keyframes for Swinging/Breathing Motion */}
+      <style jsx>{`
+        @keyframes heroSwing {
+          0% {
+            transform: scale(1) rotate(0deg);
+          }
+          50% {
+            transform: scale(1.08) rotate(1.5deg);
+          }
+          100% {
+            transform: scale(1.03) rotate(-1.5deg);
+          }
+        }
+        .animate-hero-swing {
+          animation: heroSwing 18s ease-in-out infinite alternate;
+        }
+      `}</style>
+
+      {/* Full-Screen Background Image with Swinging Motion */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
         <img
           src="/home.jpg"
           alt="ACWA community members engaging in dialogue in Kakuma"
-          className="w-full h-full object-cover object-center"
+          className="w-full h-full object-cover object-center animate-hero-swing origin-center"
         />
         <div className="absolute inset-0 bg-black/65 z-10" />
       </div>
 
       <Container className="relative z-20">
         <div className="max-w-3xl text-left text-white space-y-6">
-          {/* Headline in Lora Serif matching SIR Africa */}
+          {/* Headline in Lora Serif */}
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.12]">
             Building peaceful, empowered and self-reliant <span className="text-[#4CAF50] italic font-normal">communities.</span>
           </h1>
 
-          {/* Subtitle with Left Green Border Accent matching SIR Africa */}
+          {/* Subtitle with Left Green Border Accent */}
           <div className="border-l-4 border-[#4CAF50] pl-6 my-6">
             <p className="text-base sm:text-xl text-white/90 leading-relaxed font-normal max-w-2xl">
               ACWA works directly with refugees, host communities, vulnerable children, women, and youth through peacebuilding, education, livelihoods, child protection, and community welfare initiatives in Turkana County, Kenya.
             </p>
           </div>
 
-          {/* SIR Africa Style Action Buttons */}
+          {/* Action Buttons */}
           <div className="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
             <Link
               href="/donate"

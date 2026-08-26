@@ -111,7 +111,7 @@ export default function ContactPage() {
                   <span>Registration Credentials</span>
                 </div>
                 <p className="text-xs text-[#D5EBD9]/80 leading-relaxed">
-                  Registered under the Community Groups Registration Act No. 30 of 2021 in Kenya (2025). Official Reg. No. 30 of 2021.
+                  Registered under the Community Groups Registration Act No. 30 of 2021 in Kenya. Official Reg. No. DSD/23/124/02/152725.
                 </p>
               </div>
             </div>

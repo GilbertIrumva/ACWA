@@ -195,7 +195,9 @@ export default function MobileNavigation({ isOpen, onClose, navLinks }) {
             </div>
             <div className="flex items-center space-x-2">
               <Mail className="w-3.5 h-3.5 text-[#2E7D32] dark:text-[#4CAF50] shrink-0" />
-              <span className="truncate">arisecwel.acces@gmail.com</span>
+              <a href="mailto:arisecwel.acces@gmail.com" className="truncate hover:underline hover:text-[#2E7D32] dark:hover:text-[#4CAF50] transition-colors">
+                arisecwel.acces@gmail.com
+              </a>
             </div>
           </div>
         </div>

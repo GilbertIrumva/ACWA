@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Container from '../ui/Container';
@@ -51,6 +51,7 @@ export default function Header() {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  const navRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -63,6 +64,26 @@ export default function Header() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Close dropdown on click outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (navRef.current && !navRef.current.contains(event.target)) {
+        setActiveDropdown(null);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  // Close dropdown when changing route
+  useEffect(() => {
+    setActiveDropdown(null);
+  }, [pathname]);
+
+  const toggleDropdown = (key) => {
+    setActiveDropdown((prev) => (prev === key ? null : key));
+  };
 
   const headerBgClass = scrolled
     ? 'bg-white/95 dark:bg-[#042F20]/95 backdrop-blur-md shadow-sm border-b border-gray-100 dark:border-emerald-800/30 py-3'
@@ -94,7 +115,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8 relative" aria-label="Main Navigation">
+          <nav ref={navRef} className="hidden lg:flex items-center space-x-6 xl:space-x-8 relative" aria-label="Main Navigation">
             {NAV_LINKS.map((link) => {
               const isActive = pathname === link.href || (link.href !== '/' && pathname.startsWith(link.href));
 
@@ -104,24 +125,23 @@ export default function Header() {
                 return (
                   <div
                     key={link.name}
-                    className="relative group"
-                    onMouseEnter={() => setActiveDropdown(link.dropdownKey)}
-                    onMouseLeave={() => setActiveDropdown(null)}
+                    className="relative"
                   >
-                    <Link
-                      href={link.href}
-                      prefetch={true}
-                      className={`py-1 text-base font-semibold inline-flex items-center space-x-1 transition-all duration-150 relative ${
-                        isActive
+                    <button
+                      type="button"
+                      onClick={() => toggleDropdown(link.dropdownKey)}
+                      onMouseEnter={() => setActiveDropdown(link.dropdownKey)}
+                      className={`py-1 text-base font-semibold inline-flex items-center space-x-1 transition-all duration-150 relative cursor-pointer ${
+                        isActive || isOpen
                           ? 'text-[#2E7D32] dark:text-[#4CAF50] border-b-2 border-[#2E7D32] dark:border-[#4CAF50]'
-                          : 'text-gray-900 dark:text-white hover:text-[#2E7D32] dark:hover:text-[#4CAF50] hover:border-b-2 hover:border-[#2E7D32] dark:hover:border-[#4CAF50]'
+                          : 'text-gray-900 dark:text-white hover:text-[#2E7D32] dark:hover:text-[#4CAF50]'
                       }`}
                     >
                       <span>{link.name}</span>
-                      <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
-                    </Link>
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isOpen ? 'rotate-180 text-[#2E7D32] dark:text-[#4CAF50]' : ''}`} />
+                    </button>
 
-                    {/* Horizontal Dropdown Sub-Nav Bar */}
+                    {/* Horizontal Sticky Dropdown Sub-Nav Bar */}
                     <div
                       className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 bg-white dark:bg-[#042F20] rounded-2xl shadow-xl border border-gray-100 dark:border-emerald-800/40 px-6 py-3 transition-all duration-200 z-50 ${
                         isOpen
@@ -159,6 +179,7 @@ export default function Header() {
                   key={link.name}
                   href={link.href}
                   prefetch={true}
+                  onClick={() => setActiveDropdown(null)}
                   className={`py-1 text-base font-semibold transition-all duration-150 relative ${
                     isActive
                       ? 'text-[#2E7D32] dark:text-[#4CAF50] border-b-2 border-[#2E7D32] dark:border-[#4CAF50]'

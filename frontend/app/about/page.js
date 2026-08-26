@@ -42,9 +42,9 @@ export default function AboutPage() {
   ];
 
   const aboutPhotos = [
-    { src: '/IMG-20251129-WA0027.jpg', title: 'ACWA Executive Committee & Field Team', caption: 'Grassroots leaders and community organizers in Kakuma Camp.' },
-    { src: '/IMG_20260113_180100_323.jpg', title: 'Peace Dialogue & Reconciliation', caption: 'Fostering inter-community harmony between host villages and refugee camp zones.' },
-    { src: '/IMG_20260223_081540_318.jpg', title: 'Educational Support Distribution', caption: 'Direct distribution of learning materials and scholastic packages to vulnerable children.' },
+    { src: '/ACWA Executive Committee & Field Team.jpg', title: 'ACWA Executive Committee & Field Team', caption: 'Grassroots leaders and community organizers in Kakuma Camp.' },
+    { src: '/Peace Dialogue & Reconciliation.jpg', title: 'Peace Dialogue & Reconciliation', caption: 'Fostering inter-community harmony between host villages and refugee camp zones.' },
+    { src: '/Educational Support Distribution.jpg', title: 'Educational Support Distribution', caption: 'Direct distribution of learning materials and scholastic packages to vulnerable children.' },
   ];
 
   return (
@@ -53,8 +53,8 @@ export default function AboutPage() {
       <section className="relative min-h-[60vh] flex items-center overflow-hidden py-20 sm:py-28 text-white">
         <div className="absolute inset-0 z-0">
           <img
-            src="/IMG-20251129-WA0027.jpg"
-            alt="ACWA leadership and field team in Kakuma"
+            src="/ACWA Executive Committee & Field Team.jpg"
+            alt="ACWA Executive Committee and Field Team in Kakuma"
             className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-black/65 z-10" />
@@ -72,7 +72,7 @@ export default function AboutPage() {
 
             <div className="border-l-4 border-[#4CAF50] pl-6 my-4">
               <p className="text-lg sm:text-xl text-white/90 leading-relaxed font-normal">
-                ACWA is a Community Based Organization established in 2024 and registered under the Community Groups Registration Act No. 30 of 2021 in Kenya (Reg. No. 30 of 2021), operating in Kakuma Refugee Camp and Turkana host areas.
+                ACWA is a Community Based Organization established in 2024 and registered under the Community Groups Registration Act No. 30 of 2021 in Kenya (Reg. No. DSD/23/124/02/152725), operating in Kakuma Refugee Camp and Turkana host areas.
               </p>
             </div>
           </div>
@@ -111,7 +111,7 @@ export default function AboutPage() {
             {/* Featured Visual Image Side Card */}
             <div className="lg:col-span-5 relative group overflow-hidden border border-gray-200 dark:border-emerald-800/40 border-t-4 border-t-[#2E7D32] min-h-[400px]">
               <img
-                src="/IMG_20260113_180100_323.jpg"
+                src="/Peace Dialogue & Reconciliation.jpg"
                 alt="ACWA community peace dialogue in Kakuma"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
@@ -207,7 +207,7 @@ export default function AboutPage() {
                 Our Organizational Objectives
               </h2>
               <p className="text-base text-white/90 leading-relaxed">
-                ACWA operates with clear, targeted objectives designed to build community self-sufficiency, social cohesion, and grassroots peace. Registered under the Community Groups Registration Act No. 30 of 2021 in Kenya.
+                ACWA operates with clear, targeted objectives designed to build community self-sufficiency, social cohesion, and grassroots peace. Registered under the Community Groups Registration Act No. 30 of 2021 in Kenya (Reg. No. DSD/23/124/02/152725).
               </p>
             </div>
 
