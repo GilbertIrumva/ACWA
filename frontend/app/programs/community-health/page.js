@@ -54,7 +54,7 @@ export default function CommunityHealthProgramPage() {
             <div className="lg:col-span-6">
               <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-xl border border-[#16A34A]/15 dark:border-emerald-700/40">
                 <img
-                  src="/IMG_20251022_132118_086.jpg"
+                  src={encodeURI('/health & hygene.jpg')}
                   alt="Community health and hygiene campaign"
                   className="w-full h-full object-cover"
                 />

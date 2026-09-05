@@ -25,7 +25,7 @@ export default function Programs() {
       icon: ShieldCheck,
       description:
         'Providing school support for vulnerable children, remedial classes, learning materials distribution, and functional English courses for adults.',
-      image: '/Educational Support Distribution.jpg',
+      image: encodeURI('/education support.jpg'),
       href: '/programs/education',
     },
     {
@@ -58,7 +58,7 @@ export default function Programs() {
       icon: Activity,
       description:
         'Conducting sanitation campaigns, mental health support sessions, nutrition guidance, and preventive health awareness across Kakuma camps.',
-      image: '/Impact.jpg',
+      image: encodeURI('/community health.jpg'),
       href: '/programs/community-health',
     },
   ];
@@ -98,6 +98,8 @@ export default function Programs() {
                     <img
                       src={program.image}
                       alt={program.title}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <span className="absolute top-4 left-4 bg-[#1B5E20] text-white text-xs font-bold px-3 py-1 uppercase tracking-wider">

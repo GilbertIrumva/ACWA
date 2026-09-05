@@ -55,8 +55,8 @@ export default function GetInvolvedPage() {
   ];
 
   const communityGallery = [
-    { src: '/IMG_20251022_133340_696.jpg', title: 'Refugee & Host Mobilization', caption: 'Joint community members engaging in local problem solving.' },
-    { src: '/IMG_20251124_172345_679.jpg', title: 'Youth Skills Workshop', caption: 'Practical vocational training and youth leadership sessions.' },
+    { src: encodeURI('/community mobilisation.jpg'), title: 'Refugee & Host Mobilization', caption: 'Joint community members engaging in local problem solving.' },
+    { src: encodeURI('/youth Actions.jpg'), title: 'Youth Skills Workshop', caption: 'Practical vocational training and youth leadership sessions.' },
     { src: '/IMG-20260701-WA0234.jpg', title: 'Peace & Unity Festival', caption: 'Celebrating cross-community harmony in Turkana County.' },
   ];
 

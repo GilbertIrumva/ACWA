@@ -23,7 +23,7 @@ export default async function StoriesPage() {
       <section className="relative min-h-[50vh] flex items-center overflow-hidden py-20 sm:py-28 text-white">
         <div className="absolute inset-0 z-0">
           <img
-            src="/IMG_20260113_180100_323.jpg"
+            src={encodeURI('/Social cohension.jpg')}
             alt="Field dispatches and news from Kakuma"
             className="w-full h-full object-cover object-center"
           />
@@ -53,11 +53,22 @@ export default async function StoriesPage() {
           {featuredStory && (
             <div className="mb-20 bg-[#1B5E20] text-white rounded-none shadow-md overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-0 border-t-4 border-t-[#2E7D32]">
               <div className="lg:col-span-7 aspect-[16/10] lg:aspect-auto relative bg-gray-900">
-                <img
-                  src={getImageUrl(featuredStory.featuredImage, '/_MG_2602.jpg')}
-                  alt={featuredStory.title}
-                  className="w-full h-full object-cover"
-                />
+                {(() => {
+                  const featuredImageUrl =
+                    featuredStory.category?.toLowerCase().includes('livelihood') ||
+                    featuredStory.title?.toLowerCase().includes('permaculture') ||
+                    featuredStory._id === 'story-1'
+                      ? encodeURI('/agriculture.png')
+                      : getImageUrl(featuredStory.featuredImage, encodeURI('/agriculture.png'));
+
+                  return (
+                    <img
+                      src={featuredImageUrl}
+                      alt={featuredStory.title}
+                      className="w-full h-full object-cover"
+                    />
+                  );
+                })()}
                 <span className="absolute top-4 left-4 bg-[#4CAF50] text-gray-900 text-xs font-bold px-3 py-1 uppercase tracking-wider">
                   FEATURED DISPATCH
                 </span>
@@ -103,18 +114,27 @@ export default async function StoriesPage() {
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {regularStories.map((story) => (
-              <article
-                key={story._id}
-                className="group bg-[#F9FAFB] dark:bg-[#064E3B]/40 rounded-none border border-gray-200 dark:border-emerald-800/40 border-t-4 border-t-[#2E7D32] shadow-sm hover:shadow-md transition-all flex flex-col justify-between overflow-hidden"
-              >
-                <div>
-                  <div className="relative aspect-[16/10] overflow-hidden bg-gray-100">
-                    <img
-                      src={getImageUrl(story.featuredImage, '/_MG_2558.jpg')}
-                      alt={story.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
+            {regularStories.map((story) => {
+              const isPeacebuilding =
+                story.category?.toLowerCase().includes('peace') ||
+                story.title?.toLowerCase().includes('peace') ||
+                story._id === 'story-2';
+              const storyImageUrl = isPeacebuilding
+                ? encodeURI('/peace building.png')
+                : getImageUrl(story.featuredImage, '/_MG_2558.jpg');
+
+              return (
+                <article
+                  key={story._id}
+                  className="group bg-[#F9FAFB] dark:bg-[#064E3B]/40 rounded-none border border-gray-200 dark:border-emerald-800/40 border-t-4 border-t-[#2E7D32] shadow-sm hover:shadow-md transition-all flex flex-col justify-between overflow-hidden"
+                >
+                  <div>
+                    <div className="relative aspect-[16/10] overflow-hidden bg-gray-100">
+                      <img
+                        src={storyImageUrl}
+                        alt={story.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
                     <span className="absolute top-4 left-4 bg-[#1B5E20] text-white text-xs font-bold px-3 py-1 uppercase tracking-wider">
                       {story.category}
                     </span>
@@ -144,7 +164,8 @@ export default async function StoriesPage() {
                   </Link>
                 </div>
               </article>
-            ))}
+            );
+          })}
           </div>
         </Container>
       </section>

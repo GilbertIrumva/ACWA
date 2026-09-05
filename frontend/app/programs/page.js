@@ -50,7 +50,7 @@ const PROGRAMS_DATA = [
       'Distribution of books and learning materials',
     ],
     beneficiaries: 'School children, out-of-school youth, adult refugees',
-    image: '/education.jpg',
+    image: encodeURI('/education support.jpg'),
   },
   {
     slug: 'child-protection',
@@ -98,7 +98,7 @@ const PROGRAMS_DATA = [
       'Preventive health education & clean water awareness',
     ],
     beneficiaries: 'Women, mothers, vulnerable families across Kakuma',
-    image: '/Impact.jpg',
+    image: encodeURI('/community health.jpg'),
   },
 ];
 

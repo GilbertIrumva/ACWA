@@ -165,7 +165,22 @@ export default function Footer() {
 
           {/* Bottom Bar matching SIR Africa */}
           <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 dark:text-gray-400 gap-4">
-            <p>© {currentYear} ACWA (ARISE COMMUNITY WELFARE ACCESS). All rights reserved.</p>
+            <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
+              <p>© {currentYear} ACWA (ARISE COMMUNITY WELFARE ACCESS). All rights reserved.</p>
+              <span className="hidden sm:inline text-gray-400">|</span>
+              <p>
+                Developed By{' '}
+                <a
+                  href="https://gilbert-portfolio-n3wv.onrender.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-mono font-bold text-[#2E7D32] dark:text-[#4CAF50] hover:underline transition-colors"
+                >
+                  &lt;/Gilbert&gt;
+                </a>
+              </p>
+            </div>
+
             <div className="flex items-center space-x-6">
               <Link href="/privacy" className="hover:text-[#2E7D32] dark:hover:text-[#4CAF50] hover:underline transition-colors">
                 Privacy Policy

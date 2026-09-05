@@ -17,9 +17,9 @@ export default async function ImpactPage() {
 
   const impactGallery = [
     { src: '/IMG_20260717_181346_545.jpg', title: 'Field Monitoring & Verification', caption: 'On-site inspections and qualitative data collection across Kakuma camp zones.' },
-    { src: '/IMG_20251022_132118_086.jpg', title: 'Community Health Awareness', caption: 'Hygiene, sanitation, and health protection campaigns in local settlements.' },
-    { src: '/IMG_20260619_180345_290.jpg', title: 'Health Outreach Drive', caption: 'Direct community medical support and preventive care education.' },
-    { src: '/IMG_20260815_175111_257.jpg', title: 'Community Mobilization', caption: 'Refugee and host community members participating in local development meetings.' },
+    { src: encodeURI('/community health.jpg'), title: 'Community Health Awareness', caption: 'Hygiene, sanitation, and health protection campaigns in local settlements.' },
+    { src: encodeURI('/hygene actions.jpg'), title: 'Hygiene & Sanitation Actions', caption: 'Direct community hygiene demonstrations and preventive care drives.' },
+    { src: encodeURI('/community mobilisation.jpg'), title: 'Community Mobilization', caption: 'Refugee and host community members participating in local development meetings.' },
   ];
 
   return (

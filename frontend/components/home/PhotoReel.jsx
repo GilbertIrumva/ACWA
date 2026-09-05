@@ -7,12 +7,12 @@ import Link from 'next/link';
 import { ArrowRight, Camera } from 'lucide-react';
 
 const FEATURED_FIELD_PHOTOS = [
-  { src: '/_MG_2558.jpg', title: 'Peace Dialogue Circle', badge: 'Peacebuilding', caption: 'Refugee and host community elders in conflict resolution dialogue.' },
-  { src: '/_MG_2567.jpg', title: 'Classroom & Literacy Support', badge: 'Education', caption: 'Providing essential scholastic kits and tutoring for children.' },
-  { src: '/_MG_2602.jpg', title: 'Agricultural & Food Security', badge: 'Livelihoods', caption: 'Permaculture plots producing climate-resilient crops in Kakuma.' },
-  { src: '/IMG_20260113_180100_323.jpg', title: 'Community Peace Forum', badge: 'Social Cohesion', caption: 'Structured inter-community reconciliation gathering.' },
-  { src: '/IMG_20260717_180300_038.jpg', title: 'Child Support Drive', badge: 'Child Protection', caption: 'Safeguarding vulnerable orphans and providing learning materials.' },
-  { src: '/IMG_20260814_185031_400.jpg', title: 'Youth Sports & Cohesion', badge: 'Youth Action', caption: 'Mobilizing youth across camp zones through sports and leadership.' },
+  { src: encodeURI('/Peace Dialogue & Reconciliation.jpg'), title: 'Peace Dialogue Circle', badge: 'Peacebuilding', caption: 'Refugee and host community elders in conflict resolution dialogue.' },
+  { src: '/education.jpg', title: 'Classroom & Literacy Support', badge: 'Education', caption: 'Providing essential scholastic kits and tutoring for children.' },
+  { src: encodeURI('/Agriculture.jpg'), title: 'Agricultural & Food Security', badge: 'Livelihoods', caption: 'Permaculture plots producing climate-resilient crops in Kakuma.' },
+  { src: encodeURI('/Social cohension.jpg'), title: 'Community Peace Forum', badge: 'Social Cohesion', caption: 'Structured inter-community reconciliation gathering.' },
+  { src: encodeURI('/child support driv.jpg'), title: 'Child Support Drive', badge: 'Child Protection', caption: 'Safeguarding vulnerable orphans and providing learning materials.' },
+  { src: encodeURI('/youth Actions.jpg'), title: 'Youth Sports & Cohesion', badge: 'Youth Action', caption: 'Mobilizing youth across camp zones through sports and leadership.' },
 ];
 
 export default function PhotoReel() {
@@ -51,6 +51,7 @@ export default function PhotoReel() {
                     alt={img.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
+                    decoding="async"
                   />
                   <span className="absolute top-4 left-4 bg-[#1B5E20] text-white text-xs font-bold px-3 py-1 uppercase tracking-wider">
                     {img.badge}

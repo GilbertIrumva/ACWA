@@ -9,7 +9,7 @@ export const MOCK_STORIES = [
     category: 'Livelihoods',
     author: 'ACWA Communications Team',
     location: 'Kakuma Camp Zone 3 & Host Village',
-    featuredImage: '/_MG_2602.jpg',
+    featuredImage: encodeURI('/agriculture.png'),
     body: `In the harsh, arid climate of Turkana County, access to fresh nutrition is a constant challenge for both refugee families and host communities. 
 
 In early 2025, ARISE COMMUNITY WELFARE ACCESS (ACWA) launched a community permaculture demonstration site. By combining simple rainwater harvesting techniques with organic compost made from household waste, community participants transformed a quarter-acre plot into a thriving food forest.
@@ -18,8 +18,7 @@ In early 2025, ARISE COMMUNITY WELFARE ACCESS (ACWA) launched a community permac
 
 The permaculture project is not only providing vital nutrition for vulnerable households—it is also serving as a space for refugee and host community members to work side by side, building deep social bonds and mutual trust.`,
     gallery: [
-      '/_MG_2602.jpg',
-      '/IMG_20260223_081540_318.jpg',
+      encodeURI('/agriculture.png'),
       '/livelihood.jpg',
     ],
     featured: true,
@@ -34,7 +33,7 @@ The permaculture project is not only providing vital nutrition for vulnerable ho
     category: 'Peacebuilding',
     author: 'OMBENI MASUMBUKO',
     location: 'Kakuma Refugee Camp',
-    featuredImage: '/_MG_2558.jpg',
+    featuredImage: encodeURI('/peace building.png'),
     body: `Peace is built through continuous, respectful dialogue. Last month, ACWA facilitated a two-day peace dialogue forum bringing together 30 community leaders representing diverse ethnic groups within Kakuma Refugee Camp and neighboring Turkana villages.
 
 Discussions focused on mitigating tensions around firewood collection, water point access, and youth unemployment. Through structured mediation, leaders established a joint Peace Committee with representatives from both communities.
@@ -42,7 +41,7 @@ Discussions focused on mitigating tensions around firewood collection, water poi
 "When we sit together under the shade tree and talk as human beings, we realize our goals for our children are exactly the same," shared a Turkana village elder.
 
 ACWA continues to support the committee with monthly check-ins and conflict resolution refresher workshops.`,
-    gallery: ['/IMG_20260113_180100_323.jpg', '/peace-building-and.jpg'],
+    gallery: [encodeURI('/peace building.png'), encodeURI('/Social cohension.jpg')],
     featured: false,
   },
   {
@@ -55,13 +54,13 @@ ACWA continues to support the committee with monthly check-ins and conflict reso
     category: 'Education Support',
     author: 'ACWA Education Lead',
     location: 'Kakuma Primary Schools',
-    featuredImage: '/_MG_2567.jpg',
+    featuredImage: encodeURI('/Educational Support Distribution.jpg'),
     body: `Displacement often disrupts education for years. To prevent children from slipping through the cracks, ACWA’s Education Support program distributed scholastic packages containing notebooks, pens, mathematical sets, and school bags to vulnerable children.
 
 In addition, volunteer teachers conduct weekend remedial classes in English and mathematics for children who have recently arrived in the camp or require extra academic support.
 
 "Every child deserves the chance to learn and imagine a bright future," says OMBENI MASUMBUKO, ACWA Lead. "By removing basic material barriers, we give these children the confidence to stay in school."`,
-    gallery: ['/IMG_20260223_081540_318.jpg', '/education.jpg'],
+    gallery: ['/education.jpg', encodeURI('/Educational Support Distribution.jpg')],
     featured: false,
   },
   {
@@ -74,13 +73,13 @@ In addition, volunteer teachers conduct weekend remedial classes in English and 
     category: 'Child Welfare',
     author: 'ACWA Protection Officer',
     location: 'Kakuma Refugee Camp Zones',
-    featuredImage: '/IMG_20260717_180300_038.jpg',
+    featuredImage: encodeURI('/child support driv.jpg'),
     body: `Children in humanitarian settings face extreme vulnerabilities, including risk of neglect, trauma, and lack of basic welfare support. ACWA's Child Protection initiative works at the grassroots level to train community protection monitors and set up safe spaces.
 
 Through regular home visits and coordination with local school administrators, ACWA identifies orphans and child-headed households needing emergency scholastic and nutritional intervention.
 
 "Protecting a child takes an entire community working in unison," notes the ACWA Protection Officer. "When we protect a child, we protect the future of Turkana County."`,
-    gallery: ['/IMG_20260717_180300_038.jpg', '/child-protection.jpg'],
+    gallery: ['/child-protection.jpg', encodeURI('/child support.jpg')],
     featured: false,
   },
   {
@@ -93,13 +92,13 @@ Through regular home visits and coordination with local school administrators, A
     category: 'Community Health',
     author: 'ACWA Health Team',
     location: 'Kakuma Host Villages & Camp Zones',
-    featuredImage: '/IMG_20251022_132118_086.jpg',
+    featuredImage: encodeURI('/community health.jpg'),
     body: `Preventive healthcare and hygiene are essential to preventing disease outbreaks in densely populated refugee settlements and arid host villages. ACWA health promoters conduct door-to-door sanitation demonstrations and handwashing station setups.
 
 In partnership with local healthcare volunteers, ACWA distributes clean hygiene kits and conducts maternal nutrition awareness sessions for expectant mothers.
 
 "Awareness saves lives," emphasizes an ACWA community health volunteer. "Simple practices like water treatment and proper sanitation drastically reduce waterborne illnesses."`,
-    gallery: ['/IMG_20251022_132118_086.jpg', '/IMG_20260619_180345_290.jpg'],
+    gallery: [encodeURI('/health & hygene.jpg'), encodeURI('/hygene actions.jpg')],
     featured: false,
   },
   {
@@ -112,13 +111,13 @@ In partnership with local healthcare volunteers, ACWA distributes clean hygiene 
     category: 'Youth Action',
     author: 'OMBENI MASUMBUKO',
     location: 'Kakuma Main Sports Field',
-    featuredImage: '/IMG_20260814_185031_400.jpg',
+    featuredImage: encodeURI('/youth Actions.jpg'),
     body: `Sports provide a powerful, neutral platform to break down barriers and foster friendships among young people. ACWA organized an inter-community football tournament bringing together youth teams from different refugee camp zones and host villages.
 
 Alongside the matches, youth leaders participated in peacebuilding workshops, learning leadership, non-violent communication, and community organizing skills.
 
 "On the pitch, we are not refugees or host community—we are teammates," says a youth participant. "Sports gave us a shared language and lifelong friendships."`,
-    gallery: ['/IMG_20260814_185031_400.jpg', '/IMG-20260701-WA0234.jpg'],
+    gallery: [encodeURI('/youth Actions.jpg'), encodeURI('/social cohesio.jpg')],
     featured: false,
   },
 ];
@@ -246,7 +245,7 @@ export const MOCK_PROGRAMS = [
     category: 'Health & Sanitation',
     shortDescription: 'Hygiene campaigns, mental health psychosocial support, nutrition education, and disease prevention awareness.',
     description: 'Promoting community health through preventive hygiene education, sanitation kits, MHPSS sessions, and maternal nutrition advice.',
-    heroImage: '/Impact.jpg',
+    heroImage: encodeURI('/community health.jpg'),
     activities: [
       'Hygiene and sanitation campaigns across camp zones',
       'Mental health and psychosocial support (MHPSS) workshops',
@@ -263,19 +262,43 @@ export const MOCK_PROGRAMS = [
 export const MOCK_TEAM_MEMBERS = [
   {
     _id: 'team-1',
-    name: 'OMBENI MASUMBUKO',
-    role: 'Executive Director & Founder',
-    biography: 'Dedicated community organizer and peace builder with over a decade of experience advocating for refugees and host communities in Turkana County.',
-    photo: '/_MG_2558.jpg',
+    name: 'Lavie Museno',
+    role: 'Founder',
+    biography: 'Founder of Arise Community Welfare Access (ACWA).',
+    photo: encodeURI('/FOUNDER LAVIE MUSENO .jpg'),
     order: 1,
   },
   {
     _id: 'team-2',
-    name: 'Sarah Akiru',
-    role: 'Permaculture & Livelihoods Coordinator',
-    biography: 'Agronomist specializing in dryland agriculture, water harvesting, and organic farming techniques adapted for Turkana.',
-    photo: '/_MG_2602.jpg',
+    name: 'Ombeni Masumbuko',
+    role: 'Director',
+    biography: 'Director of Arise Community Welfare Access (ACWA).',
+    photo: encodeURI('/DIRECTOR OMBENI MASUMBUKO .jpg'),
     order: 2,
+  },
+  {
+    _id: 'team-3',
+    name: 'Hawa Hamadi',
+    role: 'Treasurer',
+    biography: 'Treasurer of Arise Community Welfare Access (ACWA).',
+    photo: encodeURI('/HAWA HAMADI  Treasure_.jpg'),
+    order: 3,
+  },
+  {
+    _id: 'team-4',
+    name: 'Issa David',
+    role: 'Secretary',
+    biography: 'Secretary of Arise Community Welfare Access (ACWA).',
+    photo: encodeURI('/SECRETARY ISSA DAVID.jpg'),
+    order: 4,
+  },
+  {
+    _id: 'team-5',
+    name: 'David Atanas Chris',
+    role: 'Vice Secretary',
+    biography: 'Vice Secretary of Arise Community Welfare Access (ACWA).',
+    photo: encodeURI('/V. SECRETARY DAVID ATANAS CHRIS.jpg'),
+    order: 5,
   },
 ];
 

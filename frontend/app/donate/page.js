@@ -23,8 +23,8 @@ export default function DonatePage() {
       <section className="relative overflow-hidden py-20 sm:py-28 text-white">
         <div className="absolute inset-0 z-0">
           <img
-            src="/IMG_20260223_081540_318.jpg"
-            alt="Educational support distribution in Kakuma"
+            src={encodeURI('/child support.jpg')}
+            alt="Educational and welfare support in Kakuma"
             className="w-full h-full object-cover object-center brightness-110 contrast-105"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/50 to-black/30 z-10" />

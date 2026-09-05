@@ -13,7 +13,7 @@ export const metadata = {
 export default function PartnerWithUsPage() {
   const stakeholderGallery = [
     { src: '/IMG-20251129-WA0027.jpg', title: 'Field Team & Community Leaders', caption: 'ACWA executive committee and village leaders reviewing project goals.' },
-    { src: '/IMG_20260223_081540_318.jpg', title: 'Educational Support Distribution', caption: 'Joint distribution of learning materials and scholastic packages.' },
+    { src: encodeURI('/Educational Support Distribution.jpg'), title: 'Educational Support Distribution', caption: 'Joint distribution of learning materials and scholastic packages.' },
     { src: '/get-in-touch.jpg', title: 'Stakeholder Consultation', caption: 'Engaging local government and institutional partners in Turkana.' },
   ];
 
@@ -23,7 +23,7 @@ export default function PartnerWithUsPage() {
       <section className="relative min-h-[55vh] flex items-center overflow-hidden py-20 sm:py-28 text-white">
         <div className="absolute inset-0 z-0">
           <img
-            src="/IMG_20251124_172345_679.jpg"
+            src={encodeURI('/community mobilisation.jpg')}
             alt="ACWA community partnerships and youth workshops in Kakuma"
             className="w-full h-full object-cover object-center"
           />
