@@ -18,18 +18,24 @@ const TEAM_MEMBERS = [
   },
   {
     id: 'team-3',
+    name: 'Espoir Museno',
+    role: 'Assistant Director',
+    image: encodeURI('/Espoir Museno.jpeg'),
+  },
+  {
+    id: 'team-4',
     name: 'Hawa Hamadi',
     role: 'Treasurer',
     image: encodeURI('/HAWA HAMADI  Treasure_.jpg'),
   },
   {
-    id: 'team-4',
+    id: 'team-5',
     name: 'Issa David',
     role: 'Secretary',
     image: encodeURI('/SECRETARY ISSA DAVID.jpg'),
   },
   {
-    id: 'team-5',
+    id: 'team-6',
     name: 'David Atanas Chris',
     role: 'Vice Secretary',
     image: encodeURI('/V. SECRETARY DAVID ATANAS CHRIS.jpg'),
@@ -50,7 +56,7 @@ export default function TeamSection() {
           centered={true}
         />
 
-        <div className="flex flex-nowrap overflow-x-auto lg:grid lg:grid-cols-5 gap-3 sm:gap-4 md:gap-6 w-full pb-4 lg:pb-0 scrollbar-none">
+        <div className="flex flex-nowrap overflow-x-auto lg:grid lg:grid-cols-6 gap-3 sm:gap-4 md:gap-6 w-full pb-4 lg:pb-0 scrollbar-none">
           {TEAM_MEMBERS.map((member) => (
             <div
               key={member.id}
@@ -72,7 +78,7 @@ export default function TeamSection() {
 
               {/* Card Body: Role & Name */}
               <div className="p-3 sm:p-5 text-center space-y-1 sm:space-y-1.5 flex-1 flex flex-col justify-center bg-white dark:bg-[#064E3B]/40">
-                <span className="text-[10px] sm:text-xs font-bold text-[#2E7D32] dark:text-[#4CAF50] uppercase tracking-wider block truncate">
+                <span className="text-[10px] sm:text-[11px] xl:text-xs font-bold text-[#2E7D32] dark:text-[#4CAF50] uppercase tracking-wider block">
                   {member.role}
                 </span>
                 <h3 className="font-serif font-extrabold text-xs sm:text-base md:text-lg text-gray-900 dark:text-white leading-snug">
